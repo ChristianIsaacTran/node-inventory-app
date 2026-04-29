@@ -47,6 +47,18 @@
 
             ex: many students can enroll in many classes
 
+note: also, postgreSQL recommends to use a lowercase snakecase. DO NOT USE UPPCASE LETTERS IN TABLE OR COLUMN NAMES.
+
+ex: 
+
+        - This is bad: 
+        TableNameOne
+
+        - Do lowercase snakecase instead:
+        table_name_one
+
+        it is recommended on the postgreSQL wiki "Don't do this" section.
+
 ## topic of the inventory app
 
 - I want to create an inventory management app that uses fortnite weapons and items for this current season and chapter (at the time of writing, fortnite is currently in Chapter 7 season 2: Showdown )
