@@ -49,9 +49,9 @@
 
 note: also, postgreSQL recommends to use a lowercase snakecase. DO NOT USE UPPCASE LETTERS IN TABLE OR COLUMN NAMES.
 
-ex: 
+ex:
 
-        - This is bad: 
+        - This is bad:
         TableNameOne
 
         - Do lowercase snakecase instead:
@@ -116,3 +116,25 @@ Main tables in the database:
 
 note: To keep this simple I am not going to make entries for
 the miscellaneous stuff, like building mats or vehicles, etc.
+
+## project notes
+
+- I installed the additional package "pg-format" to assist in creating pg valid
+  sql queries with escaped SQL literals and indentifiers. Helped in writing the SQL setup script to be more dynamic.
+
+        pg-format supports bulk inserts in the form of using nested arrays.
+        For example:
+
+        - [['a','b'], ['c','d']] this nested arrary turns into:
+
+        ('a', 'b'), ('c', 'd') and so on.
+
+- pg-format also uses a substitution style similar to C function sprintf() where it replaces escaped characters:
+
+        - %% outputs a literal % character if needed
+
+        - %I outputs an escaped SQL identifier
+
+        - %L outputs an escaped SQL literal
+
+        - %s outputs a simple string
