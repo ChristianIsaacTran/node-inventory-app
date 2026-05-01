@@ -138,3 +138,8 @@ the miscellaneous stuff, like building mats or vehicles, etc.
         - %L outputs an escaped SQL literal
 
         - %s outputs a simple string
+
+- I manually went through and added all of the weapons, utility, and 
+the consumables from this fortnite season chapter 7 season 2 up to 
+update v40.10. If the game updates, the records will not be accurate 
+to the loot pool which is fine for this project. It was VERY painful making my own entries one by one, but I confirmed that the setup script works to seed the tables.
