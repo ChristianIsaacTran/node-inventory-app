@@ -134,9 +134,8 @@ the miscellaneous stuff, like building mats or vehicles, etc.
   1. /newitem/consumables = presents a form to add a new consumable
   2. /newitem/utility = presents a form to add a new utility item
   3. /newitem/weapons = presents a form to add a new weapon
-
-  - For now, get the homepage and the items inside the SQL table displayed. Get base functuionalities done and working, then 
-  addons can come later once the page base functionality is working.
+  - For now, get the homepage and the items inside the SQL table displayed. Get base functuionalities done and working, then
+    addons can come later once the page base functionality is working.
 
 ## project notes
 
@@ -164,3 +163,19 @@ the miscellaneous stuff, like building mats or vehicles, etc.
   the consumables from this fortnite season chapter 7 season 2 up to
   update v40.10. If the game updates, the records will not be accurate
   to the loot pool which is fine for this project. It was VERY painful making my own entries one by one, but I confirmed that the setup script works to seed the tables.
+
+- The difference between module.exports and just, exports.whatever, is that exports.whatever just adds onto the existing exports object, while
+  the module.exports itself RETURNS the exports object. It is a user preference on how the exports in commonJS should be handled, but I should
+  stick to one for consistency sake.
+
+      - My current rule of thumb is:
+          - Stick to using module.exports at the bottom of file
+          for everything.
+
+          - use exports.func for smaller files. Or I could just use
+          module.exports to be consistent.
+
+## website layout
+
+- A quick drawing of the website layout I want to do
+  ![drawingofinventorylayout](inventoryPlan.png)
