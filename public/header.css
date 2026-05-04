@@ -1,0 +1,9 @@
+header {
+    grid-area: header;
+    background-color: #4c51f7;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 3rem;
+}

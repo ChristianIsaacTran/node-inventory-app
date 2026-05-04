@@ -1,0 +1,47 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ul,
+ol,
+p,
+div,
+a {
+  padding: 0;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "fortniteFont";
+  src: url(./fonts/fortnite_font.ttf) format("truetype");
+}
+
+html {
+  font-family: "fortniteFont";
+  min-height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "navbar main";
+  grid-template-columns: 500px 1fr;
+  grid-template-rows: 20vh 100vh;
+}
+
+main {
+    grid-area: main;
+}
