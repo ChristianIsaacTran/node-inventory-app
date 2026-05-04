@@ -36,6 +36,7 @@ const SQLQueryTables = `
         fire_rate DECIMAL(5,2),
         reload_time DECIMAL(5,2),
         image_url VARCHAR(255),
+        amount INTEGER,
 
         CONSTRAINT fk_type
             FOREIGN KEY(item_category)
@@ -55,6 +56,7 @@ const SQLQueryTables = `
         shield_amount INTEGER, 
         effect VARCHAR(50),
         image_url VARCHAR(255),
+        amount INTEGER,
 
         CONSTRAINT fk_type
             FOREIGN KEY(item_category)
@@ -74,6 +76,7 @@ const SQLQueryTables = `
         max_stack INTEGER,
         item_description VARCHAR(255),
         image_url VARCHAR(255),
+        amount INTEGER,
 
         CONSTRAINT fk_type
             FOREIGN KEY(item_category)
@@ -151,7 +154,7 @@ async function seedWeaponsTable(client) {
   // using pg-format to do bulk insert
   const formattedWeaponSQL = format(
     `
-    INSERT INTO weapons(item_name, item_category, item_rarity, bullet_type, mag_size, damage, dps, crit, fire_rate, reload_time, image_url) 
+    INSERT INTO weapons(item_name, item_category, item_rarity, bullet_type, mag_size, damage, dps, crit, fire_rate, reload_time, image_url, amount) 
     VALUES %L`,
     records.weaponRecords,
   );
@@ -169,7 +172,7 @@ async function seedUtilityTable(client) {
   // using pg-format to do bulk insert
   const formattedUtilitiesSQL = format(
     `
-    INSERT INTO utilities(item_name, item_category, item_rarity, max_stack, item_description, image_url)
+    INSERT INTO utilities(item_name, item_category, item_rarity, max_stack, item_description, image_url, amount)
     VALUES %L`,
     records.utilityRecords,
   );
@@ -187,7 +190,7 @@ async function seedConsumablesTable(client) {
   // using pg-format to do bulk insert
   const formattedConsumablesSQL = format(
     `
-    INSERT INTO consumables(item_name, item_category, item_rarity, heal_amount, shield_amount, effect, image_url)
+    INSERT INTO consumables(item_name, item_category, item_rarity, heal_amount, shield_amount, effect, image_url, amount)
     VALUES %L`,
     records.consumablesRecords,
   );

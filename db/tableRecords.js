@@ -42,6 +42,7 @@ const weaponRecords = [
     8.8,
     3.52,
     "https://static.wikia.nocookie.net/fortnite/images/f/f6/Modular_Combat_Assault_Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20240613113019",
+    50,
   ],
   [
     "combat assault rifle",
@@ -55,6 +56,7 @@ const weaponRecords = [
     8.8,
     3.36,
     "https://static.wikia.nocookie.net/fortnite/images/f/f6/Modular_Combat_Assault_Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20240613113019",
+    50,
   ],
   [
     "combat assault rifle",
@@ -68,6 +70,7 @@ const weaponRecords = [
     8.8,
     3.2,
     "https://static.wikia.nocookie.net/fortnite/images/f/f6/Modular_Combat_Assault_Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20240613113019",
+    50,
   ],
   [
     "combat assault rifle",
@@ -81,6 +84,7 @@ const weaponRecords = [
     8.8,
     3.04,
     "https://static.wikia.nocookie.net/fortnite/images/f/f6/Modular_Combat_Assault_Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20240613113019",
+    50,
   ],
   [
     "combat assault rifle",
@@ -94,6 +98,7 @@ const weaponRecords = [
     8.8,
     2.88,
     "https://static.wikia.nocookie.net/fortnite/images/f/f6/Modular_Combat_Assault_Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20240613113019",
+    50,
   ],
   [
     "nemesis ar",
@@ -107,6 +112,7 @@ const weaponRecords = [
     5,
     2.75,
     "https://static.wikia.nocookie.net/fortnite/images/b/b6/Modular_Nemesis_AR_-_Weapon_-_Fortnite.png/revision/latest?cb=20231203202144",
+    50,
   ],
   [
     "nemesis ar",
@@ -120,6 +126,7 @@ const weaponRecords = [
     5,
     2.62,
     "https://static.wikia.nocookie.net/fortnite/images/b/b6/Modular_Nemesis_AR_-_Weapon_-_Fortnite.png/revision/latest?cb=20231203202144",
+    50,
   ],
   [
     "nemesis ar",
@@ -133,6 +140,7 @@ const weaponRecords = [
     5,
     2.25,
     "https://static.wikia.nocookie.net/fortnite/images/b/b6/Modular_Nemesis_AR_-_Weapon_-_Fortnite.png/revision/latest?cb=20231203202144",
+    50,
   ],
   [
     "nemesis ar",
@@ -146,6 +154,7 @@ const weaponRecords = [
     5,
     2.38,
     "https://static.wikia.nocookie.net/fortnite/images/b/b6/Modular_Nemesis_AR_-_Weapon_-_Fortnite.png/revision/latest?cb=20231203202144",
+    50,
   ],
   [
     "nemesis ar",
@@ -159,6 +168,7 @@ const weaponRecords = [
     5,
     2.25,
     "https://static.wikia.nocookie.net/fortnite/images/b/b6/Modular_Nemesis_AR_-_Weapon_-_Fortnite.png/revision/latest?cb=20231203202144",
+    50,
   ],
   [
     "assault rifle",
@@ -172,6 +182,7 @@ const weaponRecords = [
     5.5,
     2.16,
     "https://static.wikia.nocookie.net/fortnite/images/4/41/Assault_Rifle_%28v11.00_-_High_Tier%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20210226220245",
+    50,
   ],
   [
     "o.x.r rifle",
@@ -185,6 +196,7 @@ const weaponRecords = [
     4.7,
     2.25,
     "https://static.wikia.nocookie.net/fortnite/images/a/a3/O.X.R._Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20250807114042",
+    50,
   ],
   [
     "squibbly's combat assault rifle",
@@ -198,6 +210,7 @@ const weaponRecords = [
     8.8,
     2.72,
     "https://static.wikia.nocookie.net/fortnite/images/f/f6/Modular_Combat_Assault_Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20240613113019",
+    50,
   ],
   [
     "brute nemesis ar",
@@ -211,6 +224,7 @@ const weaponRecords = [
     5,
     2.12,
     "https://static.wikia.nocookie.net/fortnite/images/b/b6/Modular_Nemesis_AR_-_Weapon_-_Fortnite.png/revision/latest?cb=20231203202144",
+    50,
   ],
   [
     "overclocked pulse rifle",
@@ -224,6 +238,7 @@ const weaponRecords = [
     3.5,
     2.68,
     "https://static.wikia.nocookie.net/fortnite/images/5/50/Pulse_Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20210608065646",
+    50,
   ],
   [
     "eradicator o.x.r rifle",
@@ -237,6 +252,7 @@ const weaponRecords = [
     4.7,
     2.5,
     "https://static.wikia.nocookie.net/fortnite/images/b/b1/Eradicator_O.X.R._Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20250807114004",
+    50,
   ],
   [
     "iron pump shotgun",
@@ -250,6 +266,7 @@ const weaponRecords = [
     0.8,
     5.61,
     "https://static.wikia.nocookie.net/fortnite/images/9/93/Iron_Pump_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20251129215617",
+    50,
   ],
   [
     "iron pump shotgun",
@@ -263,6 +280,7 @@ const weaponRecords = [
     0.8,
     5.36,
     "https://static.wikia.nocookie.net/fortnite/images/9/93/Iron_Pump_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20251129215617",
+    50,
   ],
   [
     "iron pump shotgun",
@@ -276,6 +294,7 @@ const weaponRecords = [
     0.8,
     5.1,
     "https://static.wikia.nocookie.net/fortnite/images/9/93/Iron_Pump_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20251129215617",
+    50,
   ],
   [
     "iron pump shotgun",
@@ -289,6 +308,7 @@ const weaponRecords = [
     0.8,
     4.84,
     "https://static.wikia.nocookie.net/fortnite/images/9/93/Iron_Pump_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20251129215617",
+    50,
   ],
   [
     "iron pump shotgun",
@@ -302,6 +322,7 @@ const weaponRecords = [
     0.8,
     4.59,
     "https://static.wikia.nocookie.net/fortnite/images/9/93/Iron_Pump_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20251129215617",
+    50,
   ],
   [
     "twin hammer shotguns",
@@ -315,6 +336,7 @@ const weaponRecords = [
     2.01,
     3.52,
     "https://static.wikia.nocookie.net/fortnite/images/e/e5/Twin_Hammer_Shotguns_-_Weapon_-_Fortnite.png/revision/latest?cb=20251129215643",
+    50,
   ],
   [
     "twin hammer shotguns",
@@ -328,6 +350,7 @@ const weaponRecords = [
     2.01,
     3.36,
     "https://static.wikia.nocookie.net/fortnite/images/e/e5/Twin_Hammer_Shotguns_-_Weapon_-_Fortnite.png/revision/latest?cb=20251129215643",
+    50,
   ],
   [
     "twin hammer shotguns",
@@ -341,6 +364,7 @@ const weaponRecords = [
     2.01,
     3.2,
     "https://static.wikia.nocookie.net/fortnite/images/e/e5/Twin_Hammer_Shotguns_-_Weapon_-_Fortnite.png/revision/latest?cb=20251129215643",
+    50,
   ],
   [
     "twin hammer shotguns",
@@ -354,6 +378,7 @@ const weaponRecords = [
     2.01,
     3.04,
     "https://static.wikia.nocookie.net/fortnite/images/e/e5/Twin_Hammer_Shotguns_-_Weapon_-_Fortnite.png/revision/latest?cb=20251129215643",
+    50,
   ],
   [
     "twin hammer shotguns",
@@ -367,6 +392,7 @@ const weaponRecords = [
     2.01,
     2.88,
     "https://static.wikia.nocookie.net/fortnite/images/e/e5/Twin_Hammer_Shotguns_-_Weapon_-_Fortnite.png/revision/latest?cb=20251129215643",
+    50,
   ],
   [
     "chaos reloader shotgun",
@@ -380,6 +406,7 @@ const weaponRecords = [
     1.2,
     1.8,
     "https://static.wikia.nocookie.net/fortnite/images/1/16/Chaos_Reloader_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20260319185913",
+    50,
   ],
   [
     "chaos reloader shotgun",
@@ -393,6 +420,7 @@ const weaponRecords = [
     1.2,
     1.8,
     "https://static.wikia.nocookie.net/fortnite/images/1/16/Chaos_Reloader_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20260319185913",
+    50,
   ],
   [
     "chaos reloader shotgun",
@@ -406,6 +434,7 @@ const weaponRecords = [
     1.2,
     1.8,
     "https://static.wikia.nocookie.net/fortnite/images/1/16/Chaos_Reloader_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20260319185913",
+    50,
   ],
   [
     "chaos reloader shotgun",
@@ -419,6 +448,7 @@ const weaponRecords = [
     1.2,
     1.8,
     "https://static.wikia.nocookie.net/fortnite/images/1/16/Chaos_Reloader_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20260319185913",
+    50,
   ],
   [
     "chaos reloader shotgun",
@@ -432,6 +462,7 @@ const weaponRecords = [
     1.2,
     1.8,
     "https://static.wikia.nocookie.net/fortnite/images/1/16/Chaos_Reloader_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20260319185913",
+    50,
   ],
   [
     "super shredder",
@@ -445,6 +476,7 @@ const weaponRecords = [
     0.9,
     6.7,
     "https://static.wikia.nocookie.net/fortnite/images/1/18/Super_Shredder_-_Schematic_-_Save_the_World.png/revision/latest?cb=20200711014858",
+    50,
   ],
   [
     "super shredder",
@@ -458,6 +490,7 @@ const weaponRecords = [
     0.9,
     6.36,
     "https://static.wikia.nocookie.net/fortnite/images/1/18/Super_Shredder_-_Schematic_-_Save_the_World.png/revision/latest?cb=20200711014858",
+    50,
   ],
   [
     "super shredder",
@@ -471,6 +504,7 @@ const weaponRecords = [
     0.9,
     6.03,
     "https://static.wikia.nocookie.net/fortnite/images/1/18/Super_Shredder_-_Schematic_-_Save_the_World.png/revision/latest?cb=20200711014858",
+    50,
   ],
   [
     "havoc pump shotgun",
@@ -484,6 +518,7 @@ const weaponRecords = [
     0.75,
     4.5,
     "https://static.wikia.nocookie.net/fortnite/images/4/41/Havoc_Pump_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20230310135852",
+    50,
   ],
   [
     "pinpoint iron pump shotgun",
@@ -497,6 +532,7 @@ const weaponRecords = [
     0.8,
     4.34,
     "https://static.wikia.nocookie.net/fortnite/images/4/41/Havoc_Pump_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20230310135852",
+    50,
   ],
   [
     "dark voyager's obliterator",
@@ -510,6 +546,7 @@ const weaponRecords = [
     1.2,
     1.8,
     "https://static.wikia.nocookie.net/fortnite/images/1/16/Chaos_Reloader_Shotgun_-_Weapon_-_Fortnite.png/revision/latest?cb=20260319185913",
+    50,
   ],
   [
     "thunder burst smg",
@@ -523,6 +560,7 @@ const weaponRecords = [
     6.75,
     2.53,
     "https://static.wikia.nocookie.net/fortnite/images/7/7f/Modular_Thunder_Burst_SMG_%28v28.01.01%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20231219173756",
+    50,
   ],
   [
     "thunder burst smg",
@@ -536,6 +574,7 @@ const weaponRecords = [
     6.75,
     2.41,
     "https://static.wikia.nocookie.net/fortnite/images/7/7f/Modular_Thunder_Burst_SMG_%28v28.01.01%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20231219173756",
+    50,
   ],
   [
     "thunder burst smg",
@@ -549,6 +588,7 @@ const weaponRecords = [
     6.75,
     2.3,
     "https://static.wikia.nocookie.net/fortnite/images/7/7f/Modular_Thunder_Burst_SMG_%28v28.01.01%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20231219173756",
+    50,
   ],
   [
     "thunder burst smg",
@@ -562,6 +602,7 @@ const weaponRecords = [
     6.75,
     2.18,
     "https://static.wikia.nocookie.net/fortnite/images/7/7f/Modular_Thunder_Burst_SMG_%28v28.01.01%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20231219173756",
+    50,
   ],
   [
     "thunder burst smg",
@@ -575,6 +616,7 @@ const weaponRecords = [
     6.75,
     2.07,
     "https://static.wikia.nocookie.net/fortnite/images/7/7f/Modular_Thunder_Burst_SMG_%28v28.01.01%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20231219173756",
+    50,
   ],
   [
     "twin mag smg",
@@ -588,6 +630,7 @@ const weaponRecords = [
     13,
     2.6,
     "https://static.wikia.nocookie.net/fortnite/images/3/32/Twin_Mag_SMG_-_Weapon_-_Fortnite.png/revision/latest?cb=20221204224248",
+    50,
   ],
   [
     "twin mag smg",
@@ -601,6 +644,7 @@ const weaponRecords = [
     13,
     2.6,
     "https://static.wikia.nocookie.net/fortnite/images/3/32/Twin_Mag_SMG_-_Weapon_-_Fortnite.png/revision/latest?cb=20221204224248",
+    50,
   ],
   [
     "twin mag smg",
@@ -614,6 +658,7 @@ const weaponRecords = [
     13,
     2.6,
     "https://static.wikia.nocookie.net/fortnite/images/3/32/Twin_Mag_SMG_-_Weapon_-_Fortnite.png/revision/latest?cb=20221204224248",
+    50,
   ],
   [
     "twin mag smg",
@@ -627,6 +672,7 @@ const weaponRecords = [
     13,
     2.6,
     "https://static.wikia.nocookie.net/fortnite/images/3/32/Twin_Mag_SMG_-_Weapon_-_Fortnite.png/revision/latest?cb=20221204224248",
+    50,
   ],
   [
     "twin mag smg",
@@ -640,6 +686,7 @@ const weaponRecords = [
     13,
     2.6,
     "https://static.wikia.nocookie.net/fortnite/images/3/32/Twin_Mag_SMG_-_Weapon_-_Fortnite.png/revision/latest?cb=20221204224248",
+    50,
   ],
   [
     "apex thunder burst smg",
@@ -653,6 +700,7 @@ const weaponRecords = [
     6.75,
     1.96,
     "https://static.wikia.nocookie.net/fortnite/images/7/7f/Modular_Thunder_Burst_SMG_%28v28.01.01%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20231219173756",
+    50,
   ],
   [
     "pistol",
@@ -666,6 +714,7 @@ const weaponRecords = [
     6.8,
     1.49,
     "https://static.wikia.nocookie.net/fortnite/images/4/42/Pistol_%28High_Tier%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20210128164614",
+    50,
   ],
   [
     "pistol",
@@ -679,6 +728,7 @@ const weaponRecords = [
     6.8,
     1.42,
     "https://static.wikia.nocookie.net/fortnite/images/4/42/Pistol_%28High_Tier%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20210128164614",
+    50,
   ],
   [
     "pistol",
@@ -692,6 +742,7 @@ const weaponRecords = [
     6.8,
     1.35,
     "https://static.wikia.nocookie.net/fortnite/images/4/42/Pistol_%28High_Tier%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20210128164614",
+    50,
   ],
   [
     "pistol",
@@ -705,6 +756,7 @@ const weaponRecords = [
     6.8,
     1.28,
     "https://static.wikia.nocookie.net/fortnite/images/4/42/Pistol_%28High_Tier%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20210128164614",
+    50,
   ],
   [
     "pistol",
@@ -718,6 +770,7 @@ const weaponRecords = [
     6.8,
     1.22,
     "https://static.wikia.nocookie.net/fortnite/images/4/42/Pistol_%28High_Tier%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20210128164614",
+    50,
   ],
   [
     "hammer revolver",
@@ -731,6 +784,7 @@ const weaponRecords = [
     2.25,
     2.36,
     "https://static.wikia.nocookie.net/fortnite/images/a/a5/Hammer_Revolver_-_Weapon_-_Fortnite.png/revision/latest?cb=20260416102403",
+    50,
   ],
   [
     "hammer revolver",
@@ -744,6 +798,7 @@ const weaponRecords = [
     2.25,
     2.25,
     "https://static.wikia.nocookie.net/fortnite/images/a/a5/Hammer_Revolver_-_Weapon_-_Fortnite.png/revision/latest?cb=20260416102403",
+    50,
   ],
   [
     "hammer revolver",
@@ -757,6 +812,7 @@ const weaponRecords = [
     2.25,
     2.14,
     "https://static.wikia.nocookie.net/fortnite/images/a/a5/Hammer_Revolver_-_Weapon_-_Fortnite.png/revision/latest?cb=20260416102403",
+    50,
   ],
   [
     "hammer revolver",
@@ -770,6 +826,7 @@ const weaponRecords = [
     2.25,
     2.03,
     "https://static.wikia.nocookie.net/fortnite/images/a/a5/Hammer_Revolver_-_Weapon_-_Fortnite.png/revision/latest?cb=20260416102403",
+    50,
   ],
   [
     "wrecker revolver",
@@ -783,6 +840,7 @@ const weaponRecords = [
     1.38,
     3.06,
     "https://static.wikia.nocookie.net/fortnite/images/5/53/Wrecker_Revolver_-_Weapon_-_Fortnite.png/revision/latest?cb=20250807113939",
+    50,
   ],
   [
     "pinpoint pistol",
@@ -796,6 +854,7 @@ const weaponRecords = [
     6.8,
     1.15,
     "https://static.wikia.nocookie.net/fortnite/images/4/42/Pistol_%28High_Tier%29_-_Weapon_-_Fortnite.png/revision/latest?cb=20210128164614",
+    50,
   ],
   [
     "hammer revolver",
@@ -809,6 +868,7 @@ const weaponRecords = [
     2.25,
     1.91,
     "https://static.wikia.nocookie.net/fortnite/images/a/a5/Hammer_Revolver_-_Weapon_-_Fortnite.png/revision/latest?cb=20260416102403",
+    50,
   ],
   [
     "eradicator marksman wrecker revolver",
@@ -822,6 +882,7 @@ const weaponRecords = [
     2.07,
     3.06,
     "https://static.wikia.nocookie.net/fortnite/images/6/64/Eradicator_Marksman_Wrecker_Revolver_-_Weapon_-_Fortnite.png/revision/latest?cb=20250807143302",
+    50,
   ],
   [
     "reaper sniper rifle",
@@ -835,6 +896,7 @@ const weaponRecords = [
     0.5,
     3.38,
     "https://static.wikia.nocookie.net/fortnite/images/b/be/Reaper_Modular_Sniper_Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20240228022921",
+    50,
   ],
   [
     "boom sniper rifle",
@@ -848,6 +910,7 @@ const weaponRecords = [
     1,
     4.05,
     "https://static.wikia.nocookie.net/fortnite/images/4/42/Boom_Sniper_Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20211128154046",
+    50,
   ],
   [
     "vector 7 dmr",
@@ -861,6 +924,7 @@ const weaponRecords = [
     1.45,
     3,
     "https://static.wikia.nocookie.net/fortnite/images/4/45/Vector_7_DMR_-_Weapon_-_Fortnite.png/revision/latest?cb=20260319185839",
+    50,
   ],
   [
     "vector 7 dmr",
@@ -874,6 +938,7 @@ const weaponRecords = [
     1.45,
     2.85,
     "https://static.wikia.nocookie.net/fortnite/images/4/45/Vector_7_DMR_-_Weapon_-_Fortnite.png/revision/latest?cb=20260319185839",
+    50,
   ],
   [
     "vector 7 dmr",
@@ -887,6 +952,7 @@ const weaponRecords = [
     1.45,
     2.7,
     "https://static.wikia.nocookie.net/fortnite/images/4/45/Vector_7_DMR_-_Weapon_-_Fortnite.png/revision/latest?cb=20260319185839",
+    50,
   ],
   [
     "vector 7 dmr",
@@ -900,6 +966,7 @@ const weaponRecords = [
     1.45,
     2.8,
     "https://static.wikia.nocookie.net/fortnite/images/e/ea/The_Foundation%27s_Rift_Rifle_-_Weapon_-_Fortnite.png/revision/latest?cb=20260320091344",
+    50,
   ],
   [
     "seven cluster cannon",
@@ -913,6 +980,7 @@ const weaponRecords = [
     1,
     3,
     "https://static.wikia.nocookie.net/fortnite/images/9/9e/Seven_Cluster_Cannon_-_Weapon_-_Fortnite.png/revision/latest?cb=20260305095739",
+    50,
   ],
   [
     "seven cluster cannon",
@@ -926,6 +994,7 @@ const weaponRecords = [
     1,
     3,
     "https://static.wikia.nocookie.net/fortnite/images/9/9e/Seven_Cluster_Cannon_-_Weapon_-_Fortnite.png/revision/latest?cb=20260305095739",
+    50,
   ],
   [
     "sticky grenade launcher",
@@ -939,6 +1008,7 @@ const weaponRecords = [
     0.8,
     7.2,
     "https://static.wikia.nocookie.net/fortnite/images/3/3c/Sticky_Grenade_Launcher_-_Weapon_-_Fortnite.png/revision/latest?cb=20230825085839",
+    50,
   ],
   [
     "bouncing boomstick",
@@ -952,6 +1022,7 @@ const weaponRecords = [
     null,
     null,
     "https://static.wikia.nocookie.net/fortnite/images/1/1a/Dynamite_-_Item_-_Fortnite.png/revision/latest?cb=20181222163515",
+    50,
   ],
   [
     "seven power gloves",
@@ -965,6 +1036,7 @@ const weaponRecords = [
     null,
     11,
     "https://static.wikia.nocookie.net/fortnite/images/d/de/Seven_Power_Gloves_-_Item_-_Fortnite.png/revision/latest?cb=20260319190017",
+    50,
   ],
   [
     "foundation's power gloves",
@@ -978,6 +1050,7 @@ const weaponRecords = [
     null,
     11,
     "https://static.wikia.nocookie.net/fortnite/images/9/9d/Foundation%27s_Power_Gloves_-_Item_-_Fortnite.png/revision/latest?cb=20260322203745",
+    50,
   ],
   [
     "ice king's gauntlets",
@@ -991,6 +1064,7 @@ const weaponRecords = [
     null,
     15,
     "https://static.wikia.nocookie.net/fortnite/images/1/1a/Ice_King%27s_Gauntlets_-_Item_-_Fortnite.png/revision/latest?cb=20260319190037",
+    50,
   ],
 ];
 
@@ -1003,6 +1077,7 @@ const utilityRecords = [
     1,
     `Shoots a deployable zip-line in any direction. Gives players glider redeploy after riding. Can be shot down. Holds 12 charges with a cooldown of 30 seconds between shots.`,
     `https://static.wikia.nocookie.net/fortnite/images/3/33/Skyline_Deployer_-_Item_-_Fortnite.png/revision/latest?cb=20260319190350`,
+    50,
   ],
   [
     `overdrive grenade`,
@@ -1011,6 +1086,7 @@ const utilityRecords = [
     6,
     `A throwable shockwave grenade that gives the player the 10 seconds of slap effect. Slap effect gives player unlimited stamina for the duration.`,
     `https://static.wikia.nocookie.net/fortnite/images/9/9c/Overdrive_Grenade_-_Item_-_Fortnite.png/revision/latest?cb=20260319190308`,
+    50,
   ],
   [
     `grapple blade`,
@@ -1019,6 +1095,7 @@ const utilityRecords = [
     1,
     `A grapple hook that pulls the players towards the target. Had a slash attack that knocks players back for 40 damage per slash. Has a mag size of 4 and reloads charges every 13 seconds.`,
     `https://static.wikia.nocookie.net/fortnite/images/5/58/Grapple_Blade_-_Item_-_Fortnite.png/revision/latest?cb=20231203191519`,
+    50,
   ],
   [
     `recon scanner`,
@@ -1027,6 +1104,7 @@ const utilityRecords = [
     1,
     `A grenade launcher that shoots grenades that scans players through structures, marking them for 10 seconds. Has a magazine size of 2 and does low dps. Good for scouting hidden players from a distance.`,
     `https://static.wikia.nocookie.net/fortnite/images/9/9e/Recon_Scanner_-_Weapon_-_Fortnite.png/revision/latest?cb=20210609013358`,
+    50,
   ],
   [
     `mythic goldfish`,
@@ -1035,6 +1113,7 @@ const utilityRecords = [
     1,
     `A very rare catch from the fishing spots. A throwable statue that does 250 damage on hit to players. An instant kill for an insane catch of the day.`,
     `https://static.wikia.nocookie.net/fortnite/images/f/f6/Mythic_Goldfish_-_Item_-_Fortnite.png/revision/latest?cb=20250303222458`,
+    50,
   ],
   [
     `thunderbolt of zeus`,
@@ -1043,6 +1122,7 @@ const utilityRecords = [
     1,
     `A thunderbolt throws 3 AOE damaging bolts. The first two bolts do 80 damage and the final bolt has a bigger radius and does 140 damage. Has 3 charges and a cooldown of 8 seconds between uses.`,
     `https://static.wikia.nocookie.net/fortnite/images/f/ff/Thunderbolt_of_Zeus_-_Item_-_Fortnite.png/revision/latest?cb=20240308095605`,
+    50,
   ],
 ];
 
@@ -1056,6 +1136,7 @@ const consumablesRecords = [
     0,
     null,
     `https://static.wikia.nocookie.net/fortnite/images/5/56/Bandage_%28v11.00%29_-_Item_-_Fortnite.png/revision/latest?cb=20210215155619`,
+    50,
   ],
   [
     `med kit`,
@@ -1065,6 +1146,7 @@ const consumablesRecords = [
     0,
     null,
     `https://static.wikia.nocookie.net/fortnite/images/b/b1/Medkit_-_Item_-_Fortnite.png/revision/latest?cb=20180917023707`,
+    50,
   ],
   [
     `mini shield potion`,
@@ -1074,6 +1156,7 @@ const consumablesRecords = [
     25,
     null,
     `https://static.wikia.nocookie.net/fortnite/images/4/44/Small_Shield_Potion_%28v11.00%29_-_Item_-_Fortnite.png/revision/latest?cb=20201228223517`,
+    50,
   ],
   [
     `shield potion`,
@@ -1083,6 +1166,7 @@ const consumablesRecords = [
     50,
     null,
     `https://static.wikia.nocookie.net/fortnite/images/9/90/Shield_Potion_%28v11.00%29_-_Item_-_Fortnite.png/revision/latest?cb=20201228223257`,
+    50,
   ],
   [
     `chug jug`,
@@ -1092,6 +1176,7 @@ const consumablesRecords = [
     100,
     null,
     `https://static.wikia.nocookie.net/fortnite/images/a/a5/Chug_Jug_-_Item_-_Fortnite.png/revision/latest?cb=20200124184715`,
+    50,
   ],
   [
     `slapperoni pizza`,
@@ -1101,6 +1186,7 @@ const consumablesRecords = [
     35,
     `slap`,
     `https://static.wikia.nocookie.net/fortnite/images/0/06/Slapperoni_Slice_-_Item_-_Fortnite.png/revision/latest?cb=20260319191320`,
+    50,
   ],
   [
     `small fry`,
@@ -1110,6 +1196,7 @@ const consumablesRecords = [
     0,
     null,
     `https://static.wikia.nocookie.net/fortnite/images/a/a8/Small_Fry_%28v14.00%29_-_Item_-_Fortnite.png/revision/latest?cb=20200831154210`,
+    50,
   ],
   [
     `flopper`,
@@ -1119,6 +1206,7 @@ const consumablesRecords = [
     0,
     null,
     `https://static.wikia.nocookie.net/fortnite/images/d/dd/Flopper_%28v14.00%29_-_Item_-_Fortnite.png/revision/latest?cb=20210302024749`,
+    50,
   ],
   [
     `shield fish`,
@@ -1128,6 +1216,7 @@ const consumablesRecords = [
     40,
     null,
     `https://static.wikia.nocookie.net/fortnite/images/4/41/Shield_Fish_-_Item_-_Fortnite.png/revision/latest?cb=20200831154159`,
+    50,
   ],
   [
     `jelly fish`,
@@ -1137,6 +1226,7 @@ const consumablesRecords = [
     20,
     null,
     `https://static.wikia.nocookie.net/fortnite/images/7/74/Jellyfish_-_Item_-_Fortnite.png/revision/latest?cb=20200831154456`,
+    50,
   ],
   [
     `spicy fish`,
@@ -1146,6 +1236,7 @@ const consumablesRecords = [
     0,
     `spicy`,
     `https://static.wikia.nocookie.net/fortnite/images/a/ad/Spicy_Fish_-_Item_-_Fortnite.png/revision/latest?cb=20200831154450`,
+    50,
   ],
   [
     `slurpfish`,
@@ -1155,6 +1246,7 @@ const consumablesRecords = [
     40,
     null,
     `https://static.wikia.nocookie.net/fortnite/images/b/bd/Slurpfish_%28v14.00%29_-_Item_-_Fortnite.png/revision/latest?cb=20200831154202`,
+    50,
   ],
   [
     `midas flopper`,
@@ -1164,6 +1256,7 @@ const consumablesRecords = [
     0,
     `Turn all weapons in inventory to legendary`,
     `https://static.wikia.nocookie.net/fortnite/images/c/cf/Midas_Flopper_-_Item_-_Fortnite.png/revision/latest?cb=20200831161707`,
+    50,
   ],
   [
     `vendetta flopper`,
@@ -1173,6 +1266,7 @@ const consumablesRecords = [
     0,
     `mark nearby players`,
     `https://static.wikia.nocookie.net/fortnite/images/3/35/Vendetta_Flopper_-_Item_-_Fortnite.png/revision/latest?cb=20200831130205`,
+    50,
   ],
 ];
 

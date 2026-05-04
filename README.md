@@ -90,6 +90,7 @@ Main tables in the database:
     8. crit INTEGER
     9. fire_rate DECIMAL
     10.reload_time DECIMAL
+    11. amount INTEGER
 
     Consumables table:
     1. Item_name VARCHAR(50)
@@ -98,6 +99,7 @@ Main tables in the database:
     4. (optional, can be 0) heal_amount INTEGER
     5. (optional, can be 0) shield_amount INTEGER
     6. (optional, can be null) effect VARCHAR(50)
+    7. amount INTEGER
 
     Utility Table:
     1. Item_name VARCHAR(50)
@@ -105,6 +107,7 @@ Main tables in the database:
     3. Item_rarity VARCHAR(50) FK
     4. max_stack INTEGER
     5. Item_description VARCHAR(255)
+    6. amount INTEGER
 
     Type Table:
     1. id INTEGER PK
@@ -116,6 +119,10 @@ Main tables in the database:
 
 note: To keep this simple I am not going to make entries for
 the miscellaneous stuff, like building mats or vehicles, etc.
+
+## routes
+
+- /(root) home route: 
 
 ## project notes
 
@@ -139,7 +146,7 @@ the miscellaneous stuff, like building mats or vehicles, etc.
 
         - %s outputs a simple string
 
-- I manually went through and added all of the weapons, utility, and 
-the consumables from this fortnite season chapter 7 season 2 up to 
-update v40.10. If the game updates, the records will not be accurate 
-to the loot pool which is fine for this project. It was VERY painful making my own entries one by one, but I confirmed that the setup script works to seed the tables.
+- I manually went through and added all of the weapons, utility, and
+  the consumables from this fortnite season chapter 7 season 2 up to
+  update v40.10. If the game updates, the records will not be accurate
+  to the loot pool which is fine for this project. It was VERY painful making my own entries one by one, but I confirmed that the setup script works to seed the tables.
