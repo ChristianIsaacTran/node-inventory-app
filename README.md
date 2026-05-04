@@ -122,7 +122,21 @@ the miscellaneous stuff, like building mats or vehicles, etc.
 
 ## routes
 
-- /(root) home route: 
+- /(root) home route: Display ALL inventory in a card like component, that has buttons to change the amount
+  - add buttons to filter the category of item through SQL queries
+  - add buttons to filter the rarity of the item
+  - add a search bar to filter through for a specific item
+  - maybe add a navigation element on the left side
+  - (EXTRA CREDIT) add admin passwords to confirm the update and delete operation.
+  - (EXTRA CREDIT) add styling to make the webpage look nice.
+
+- /newitem: A form route that is a dropdown form. This is to choose the category of the next form.
+  1. /newitem/consumables = presents a form to add a new consumable
+  2. /newitem/utility = presents a form to add a new utility item
+  3. /newitem/weapons = presents a form to add a new weapon
+
+  - For now, get the homepage and the items inside the SQL table displayed. Get base functuionalities done and working, then 
+  addons can come later once the page base functionality is working.
 
 ## project notes
 
