@@ -25,16 +25,41 @@ async function getAllItems() {
     const weaponsResult = await pool.query(weaponsQuery);
     const weaponsRows = weaponsResult.rows;
 
-    // // get all rows from consumables table
-    // const conQuery = `SELECT * FROM consumables`;
-    // const conRows = await pool.query(consumablesQuery).rows;
+    // get all rows from consumables table
+    const conQuery = `
+    SELECT  
+      consumables.item_name,
+      item_type.type,
+      rarity_type.rarity,
+      consumables.heal_amount,
+      consumables.shield_amount,
+      consumables.effect,
+      consumables.image_url,
+      consumables.amount
 
-    // // get all rows from utilities table
-    // const utilQuery = `SELECT * FROM weapons`;
-    // const utilRows = await pool.query(weaponsQuery).rows;
+    FROM consumables
+    JOIN item_type ON consumables.item_category = item_type.id
+    JOIN rarity_type ON consumables.item_rarity = rarity_type.id`;
+    const conResult = await pool.query(conQuery);
+    const conRows = conResult.rows;
 
-    // return { weaponsRows, conRows, utilRows };
-    return {weaponsRows};
+    // get all rows from utilities table
+    const utilQuery = `SELECT  
+      utilities.item_name,
+      item_type.type,
+      rarity_type.rarity,
+      utilities.max_stack,
+      utilities.item_description,
+      utilities.image_url,
+      utilities.amount
+
+    FROM utilities
+    JOIN item_type ON utilities.item_category = item_type.id
+    JOIN rarity_type ON utilities.item_rarity = rarity_type.id`;
+    const utilResult = await pool.query(utilQuery);
+    const utilRows = utilResult.rows;
+
+    return { weaponsRows, conRows, utilRows };
   } catch (error) {
     console.log(error);
   }
