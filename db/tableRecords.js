@@ -41,7 +41,7 @@ const weaponRecords = [
     28.5,
     8.8,
     3.52,
-    "/public/images/combat_assault_rifle.png",
+    "/images/combat_assault_rifle.png",
     50,
   ],
   [
@@ -55,7 +55,7 @@ const weaponRecords = [
     30,
     8.8,
     3.36,
-    "/public/images/combat_assault_rifle.png",
+    "/images/combat_assault_rifle.png",
     50,
   ],
   [
@@ -69,7 +69,7 @@ const weaponRecords = [
     31.5,
     8.8,
     3.2,
-    "/public/images/combat_assault_rifle.png",
+    "/images/combat_assault_rifle.png",
     50,
   ],
   [
@@ -83,7 +83,7 @@ const weaponRecords = [
     33,
     8.8,
     3.04,
-    "/public/images/combat_assault_rifle.png",
+    "/images/combat_assault_rifle.png",
     50,
   ],
   [
@@ -97,7 +97,7 @@ const weaponRecords = [
     34.5,
     8.8,
     2.88,
-    "/public/images/combat_assault_rifle.png",
+    "/images/combat_assault_rifle.png",
     50,
   ],
   [
@@ -111,7 +111,7 @@ const weaponRecords = [
     43.5,
     5,
     2.75,
-   "/public/images/nemesis_AR.png",
+   "/images/nemesis_AR.png",
     50,
   ],
   [
@@ -125,7 +125,7 @@ const weaponRecords = [
     45,
     5,
     2.62,
-   "/public/images/nemesis_AR.png",
+   "/images/nemesis_AR.png",
     50,
   ],
   [
@@ -139,7 +139,7 @@ const weaponRecords = [
     48,
     5,
     2.25,
-   "/public/images/nemesis_AR.png",
+   "/images/nemesis_AR.png",
     50,
   ],
   [
@@ -153,7 +153,7 @@ const weaponRecords = [
     51,
     5,
     2.38,
-   "/public/images/nemesis_AR.png",
+   "/images/nemesis_AR.png",
     50,
   ],
   [
@@ -167,7 +167,7 @@ const weaponRecords = [
     52.5,
     5,
     2.25,
-   "/public/images/nemesis_AR.png",
+   "/images/nemesis_AR.png",
     50,
   ],
   [
@@ -181,7 +181,7 @@ const weaponRecords = [
     63,
     5.5,
     2.16,
-    "/public/images/OG_assault_rifle.png",
+    "/images/OG_assault_rifle.png",
     50,
   ],
   [
@@ -195,7 +195,7 @@ const weaponRecords = [
     63,
     4.7,
     2.25,
-    "/public/images/OXR_rifle.png",
+    "/images/OXR_rifle.png",
     50,
   ],
   [
@@ -209,7 +209,7 @@ const weaponRecords = [
     36,
     8.8,
     2.72,
-    "/public/images/combat_assault_rifle.png",
+    "/images/combat_assault_rifle.png",
     50,
   ],
   [
@@ -223,7 +223,7 @@ const weaponRecords = [
     51.6,
     5,
     2.12,
-   "/public/images/nemesis_AR.png",
+   "/images/nemesis_AR.png",
     50,
   ],
   [
@@ -237,7 +237,7 @@ const weaponRecords = [
     57,
     3.5,
     2.68,
-    "/public/images/pulse_rifle.png",
+    "/images/pulse_rifle.png",
     50,
   ],
   [
@@ -251,7 +251,7 @@ const weaponRecords = [
     61.13,
     4.7,
     2.5,
-    "/public/images/exotic_OXR_rifle.png",
+    "/images/exotic_OXR_rifle.png",
     50,
   ],
   [
@@ -265,7 +265,7 @@ const weaponRecords = [
     182,
     0.8,
     5.61,
-"/public/images/iron_pump.png",
+"/images/iron_pump.png",
     50,
   ],
   [
@@ -279,7 +279,7 @@ const weaponRecords = [
     192,
     0.8,
     5.36,
-"/public/images/iron_pump.png",
+"/images/iron_pump.png",
     50,
   ],
   [
@@ -293,7 +293,7 @@ const weaponRecords = [
     202,
     0.8,
     5.1,
-"/public/images/iron_pump.png",
+"/images/iron_pump.png",
     50,
   ],
   [
@@ -307,7 +307,7 @@ const weaponRecords = [
     212,
     0.8,
     4.84,
-"/public/images/iron_pump.png",
+"/images/iron_pump.png",
     50,
   ],
   [
@@ -321,7 +321,7 @@ const weaponRecords = [
     222,
     0.8,
     4.59,
-"/public/images/iron_pump.png",
+"/images/iron_pump.png",
     50,
   ],
   [
@@ -335,7 +335,7 @@ const weaponRecords = [
     105,
     2.01,
     3.52,
-   "/public/images/twin_hammer.png",
+   "/images/twin_hammer.png",
     50,
   ],
   [
@@ -349,7 +349,7 @@ const weaponRecords = [
     110,
     2.01,
     3.36,
-   "/public/images/twin_hammer.png",
+   "/images/twin_hammer.png",
     50,
   ],
   [
@@ -363,7 +363,7 @@ const weaponRecords = [
     115,
     2.01,
     3.2,
-   "/public/images/twin_hammer.png",
+   "/images/twin_hammer.png",
     50,
   ],
   [
@@ -377,7 +377,7 @@ const weaponRecords = [
     120,
     2.01,
     3.04,
-   "/public/images/twin_hammer.png",
+   "/images/twin_hammer.png",
     50,
   ],
   [
@@ -391,7 +391,7 @@ const weaponRecords = [
     125,
     2.01,
     2.88,
-   "/public/images/twin_hammer.png",
+   "/images/twin_hammer.png",
     50,
   ],
   [
@@ -405,7 +405,7 @@ const weaponRecords = [
     151.2,
     1.2,
     1.8,
-    "/public/images/chaos_reloader.png",
+    "/images/chaos_reloader.png",
     50,
   ],
   [
@@ -419,7 +419,7 @@ const weaponRecords = [
     159.6,
     1.2,
     1.8,
-    "/public/images/chaos_reloader.png",
+    "/images/chaos_reloader.png",
     50,
   ],
   [
@@ -433,7 +433,7 @@ const weaponRecords = [
     168,
     1.2,
     1.8,
-    "/public/images/chaos_reloader.png",
+    "/images/chaos_reloader.png",
     50,
   ],
   [
@@ -447,7 +447,7 @@ const weaponRecords = [
     176.4,
     1.2,
     1.8,
-    "/public/images/chaos_reloader.png",
+    "/images/chaos_reloader.png",
     50,
   ],
   [
@@ -461,7 +461,7 @@ const weaponRecords = [
     184.8,
     1.2,
     1.8,
-    "/public/images/chaos_reloader.png",
+    "/images/chaos_reloader.png",
     50,
   ],
   [
@@ -475,7 +475,7 @@ const weaponRecords = [
     263.25,
     0.9,
     6.7,
-    "/public/images/super_shredder.png",
+    "/images/super_shredder.png",
     50,
   ],
   [
@@ -489,7 +489,7 @@ const weaponRecords = [
     276.25,
     0.9,
     6.36,
-    "/public/images/super_shredder.png",
+    "/images/super_shredder.png",
     50,
   ],
   [
@@ -503,7 +503,7 @@ const weaponRecords = [
     289.25,
     0.9,
     6.03,
-    "/public/images/super_shredder.png",
+    "/images/super_shredder.png",
     50,
   ],
   [
@@ -517,7 +517,7 @@ const weaponRecords = [
     244.2,
     0.75,
     4.5,
-    "/public/images/havoc_pump.png",
+    "/images/havoc_pump.png",
     50,
   ],
   [
@@ -531,7 +531,7 @@ const weaponRecords = [
     232,
     0.8,
     4.34,
-    "/public/images/iron_pump.png",
+    "/images/iron_pump.png",
     50,
   ],
   [
@@ -545,7 +545,7 @@ const weaponRecords = [
     184.8,
     1.2,
     1.8,
-    "/public/images/chaos_reloader.png",
+    "/images/chaos_reloader.png",
     50,
   ],
   [
@@ -559,7 +559,7 @@ const weaponRecords = [
     42,
     6.75,
     2.53,
-    "/public/images/thunder_burst.png",
+    "/images/thunder_burst.png",
     50,
   ],
   [
@@ -573,7 +573,7 @@ const weaponRecords = [
     45.5,
     6.75,
     2.41,
-    "/public/images/thunder_burst.png",
+    "/images/thunder_burst.png",
     50,
   ],
   [
@@ -587,7 +587,7 @@ const weaponRecords = [
     47.25,
     6.75,
     2.3,
-    "/public/images/thunder_burst.png",
+    "/images/thunder_burst.png",
     50,
   ],
   [
@@ -601,7 +601,7 @@ const weaponRecords = [
     49,
     6.75,
     2.18,
-    "/public/images/thunder_burst.png",
+    "/images/thunder_burst.png",
     50,
   ],
   [
@@ -615,7 +615,7 @@ const weaponRecords = [
     52.5,
     6.75,
     2.07,
-    "/public/images/thunder_burst.png",
+    "/images/thunder_burst.png",
     50,
   ],
   [
@@ -629,7 +629,7 @@ const weaponRecords = [
     22.5,
     13,
     2.6,
-    "/public/images/twin_mag.png",
+    "/images/twin_mag.png",
     50,
   ],
   [
@@ -643,7 +643,7 @@ const weaponRecords = [
     24,
     13,
     2.6,
-    "/public/images/twin_mag.png",
+    "/images/twin_mag.png",
     50,
   ],
   [
@@ -657,7 +657,7 @@ const weaponRecords = [
     25.5,
     13,
     2.6,
-    "/public/images/twin_mag.png",
+    "/images/twin_mag.png",
     50,
   ],
   [
@@ -671,7 +671,7 @@ const weaponRecords = [
     27,
     13,
     2.6,
-    "/public/images/twin_mag.png",
+    "/images/twin_mag.png",
     50,
   ],
   [
@@ -685,7 +685,7 @@ const weaponRecords = [
     28.5,
     13,
     2.6,
-    "/public/images/twin_mag.png",
+    "/images/twin_mag.png",
     50,
   ],
   [
@@ -699,7 +699,7 @@ const weaponRecords = [
     58.9,
     6.75,
     1.96,
-    "/public/images/thunder_burst.png",
+    "/images/thunder_burst.png",
     50,
   ],
   [
@@ -713,7 +713,7 @@ const weaponRecords = [
     50,
     6.8,
     1.49,
-    "/public/images/pistol.png",
+    "/images/pistol.png",
     50,
   ],
   [
@@ -727,7 +727,7 @@ const weaponRecords = [
     54,
     6.8,
     1.42,
-    "/public/images/pistol.png",
+    "/images/pistol.png",
     50,
   ],
   [
@@ -741,7 +741,7 @@ const weaponRecords = [
     56,
     6.8,
     1.35,
-    "/public/images/pistol.png",
+    "/images/pistol.png",
     50,
   ],
   [
@@ -755,7 +755,7 @@ const weaponRecords = [
     58,
     6.8,
     1.28,
-    "/public/images/pistol.png",
+    "/images/pistol.png",
     50,
   ],
   [
@@ -769,7 +769,7 @@ const weaponRecords = [
     62,
     6.8,
     1.22,
-    "/public/images/pistol.png",
+    "/images/pistol.png",
     50,
   ],
   [
@@ -783,7 +783,7 @@ const weaponRecords = [
     114,
     2.25,
     2.36,
-   "/public/images/hammer_revolver.png",
+   "/images/hammer_revolver.png",
     50,
   ],
   [
@@ -797,7 +797,7 @@ const weaponRecords = [
     120,
     2.25,
     2.25,
-   "/public/images/hammer_revolver.png",
+   "/images/hammer_revolver.png",
     50,
   ],
   [
@@ -811,7 +811,7 @@ const weaponRecords = [
     126,
     2.25,
     2.14,
-   "/public/images/hammer_revolver.png",
+   "/images/hammer_revolver.png",
     50,
   ],
   [
@@ -825,7 +825,7 @@ const weaponRecords = [
     132,
     2.25,
     2.03,
-   "/public/images/hammer_revolver.png",
+   "/images/hammer_revolver.png",
     50,
   ],
   [
@@ -839,7 +839,7 @@ const weaponRecords = [
     150,
     1.38,
     3.06,
-    "/public/images/wrecker_revolver.png",
+    "/images/wrecker_revolver.png",
     50,
   ],
   [
@@ -853,7 +853,7 @@ const weaponRecords = [
     64,
     6.8,
     1.15,
-    "/public/images/pistol.png",
+    "/images/pistol.png",
     50,
   ],
   [
@@ -867,7 +867,7 @@ const weaponRecords = [
     138,
     2.25,
     1.91,
-   "/public/images/hammer_revolver.png",
+   "/images/hammer_revolver.png",
     50,
   ],
   [
@@ -881,7 +881,7 @@ const weaponRecords = [
     180,
     2.07,
     3.06,
-    "/public/images/exotic_wrecker_revolver.png",
+    "/images/exotic_wrecker_revolver.png",
     50,
   ],
   [
@@ -895,7 +895,7 @@ const weaponRecords = [
     302.5,
     0.5,
     3.38,
-    "/public/images/reaper_sniper.png",
+    "/images/reaper_sniper.png",
     50,
   ],
   [
@@ -909,7 +909,7 @@ const weaponRecords = [
     185,
     1,
     4.05,
-    "/public/images/boom_sniper.png",
+    "/images/boom_sniper.png",
     50,
   ],
   [
@@ -923,7 +923,7 @@ const weaponRecords = [
     119,
     1.45,
     3,
-    "/public/images/vector_seven_rifle.png",
+    "/images/vector_seven_rifle.png",
     50,
   ],
   [
@@ -937,7 +937,7 @@ const weaponRecords = [
     124.25,
     1.45,
     2.85,
-    "/public/images/vector_seven_rifle.png",
+    "/images/vector_seven_rifle.png",
     50,
   ],
   [
@@ -951,7 +951,7 @@ const weaponRecords = [
     131.25,
     1.45,
     2.7,
-    "/public/images/vector_seven_rifle.png",
+    "/images/vector_seven_rifle.png",
     50,
   ],
   [
@@ -965,7 +965,7 @@ const weaponRecords = [
     124.25,
     1.45,
     2.8,
-    "/public/images/foundation_rifle.png",
+    "/images/foundation_rifle.png",
     50,
   ],
   [
@@ -979,7 +979,7 @@ const weaponRecords = [
     81,
     1,
     3,
-    "/public/images/cluster_cannon.png",
+    "/images/cluster_cannon.png",
     50,
   ],
   [
@@ -993,7 +993,7 @@ const weaponRecords = [
     85,
     1,
     3,
-    "/public/images/cluster_cannon.png",
+    "/images/cluster_cannon.png",
     50,
   ],
   [
@@ -1007,7 +1007,7 @@ const weaponRecords = [
     70,
     0.8,
     7.2,
-    "/public/images/sticky_grenade_launcher.png",
+    "/images/sticky_grenade_launcher.png",
     50,
   ],
   [
@@ -1021,7 +1021,7 @@ const weaponRecords = [
     40,
     null,
     null,
-    "/public/images/bouncing_boomstick.png",
+    "/images/bouncing_boomstick.png",
     50,
   ],
   [
@@ -1035,7 +1035,7 @@ const weaponRecords = [
     50,
     null,
     11,
-    "/public/images/power_gloves.png",
+    "/images/power_gloves.png",
     50,
   ],
   [
@@ -1049,7 +1049,7 @@ const weaponRecords = [
     50,
     null,
     11,
-    "/public/images/foundation_gloves.png",
+    "/images/foundation_gloves.png",
     50,
   ],
   [
@@ -1063,7 +1063,7 @@ const weaponRecords = [
     50,
     null,
     15,
-    "/public/images/ice_gauntlets.png",
+    "/images/ice_gauntlets.png",
     50,
   ],
 ];
@@ -1076,7 +1076,7 @@ const utilityRecords = [
     3,
     1,
     `Shoots a deployable zip-line in any direction. Gives players glider redeploy after riding. Can be shot down. Holds 12 charges with a cooldown of 30 seconds between shots.`,
-    `/public/images/skyline.png`,
+    `/images/skyline.png`,
     50,
   ],
   [
@@ -1085,7 +1085,7 @@ const utilityRecords = [
     3,
     6,
     `A throwable shockwave grenade that gives the player the 10 seconds of slap effect. Slap effect gives player unlimited stamina for the duration.`,
-    `/public/images/overdrive_grenade.png`,
+    `/images/overdrive_grenade.png`,
     50,
   ],
   [
@@ -1094,7 +1094,7 @@ const utilityRecords = [
     4,
     1,
     `A grapple hook that pulls the players towards the target. Had a slash attack that knocks players back for 40 damage per slash. Has a mag size of 4 and reloads charges every 13 seconds.`,
-    `/public/images/grapple_blade.png`,
+    `/images/grapple_blade.png`,
     50,
   ],
   [
@@ -1103,7 +1103,7 @@ const utilityRecords = [
     3,
     1,
     `A grenade launcher that shoots grenades that scans players through structures, marking them for 10 seconds. Has a magazine size of 2 and does low dps. Good for scouting hidden players from a distance.`,
-    `/public/images/recon_scanner.png`,
+    `/images/recon_scanner.png`,
     50,
   ],
   [
@@ -1112,7 +1112,7 @@ const utilityRecords = [
     6,
     1,
     `A very rare catch from the fishing spots. A throwable statue that does 250 damage on hit to players. An instant kill for an insane catch of the day.`,
-    `/public/images/mythic_goldfish.png`,
+    `/images/mythic_goldfish.png`,
     50,
   ],
   [
@@ -1121,7 +1121,7 @@ const utilityRecords = [
     6,
     1,
     `A thunderbolt throws 3 AOE damaging bolts. The first two bolts do 80 damage and the final bolt has a bigger radius and does 140 damage. Has 3 charges and a cooldown of 8 seconds between uses.`,
-    `/public/images/zeus_bolt.png`,
+    `/images/zeus_bolt.png`,
     50,
   ],
 ];
@@ -1135,7 +1135,7 @@ const consumablesRecords = [
     15,
     0,
     null,
-    `/public/images/bandage.png`,
+    `/images/bandage.png`,
     50,
   ],
   [
@@ -1145,7 +1145,7 @@ const consumablesRecords = [
     100,
     0,
     null,
-    `/public/images/medkit.png`,
+    `/images/medkit.png`,
     50,
   ],
   [
@@ -1155,7 +1155,7 @@ const consumablesRecords = [
     0,
     25,
     null,
-    `/public/images/mini_potion.png`,
+    `/images/mini_potion.png`,
     50,
   ],
   [
@@ -1165,7 +1165,7 @@ const consumablesRecords = [
     0,
     50,
     null,
-    `/public/images/shield_potion.png`,
+    `/images/shield_potion.png`,
     50,
   ],
   [
@@ -1175,7 +1175,7 @@ const consumablesRecords = [
     100,
     100,
     null,
-    `/public/images/chugjug.png`,
+    `/images/chugjug.png`,
     50,
   ],
   [
@@ -1185,7 +1185,7 @@ const consumablesRecords = [
     35,
     35,
     `slap`,
-    `/public/images/slapperoni.png`,
+    `/images/slapperoni.png`,
     50,
   ],
   [
@@ -1195,7 +1195,7 @@ const consumablesRecords = [
     25,
     0,
     null,
-    `/public/images/small_fry.png`,
+    `/images/small_fry.png`,
     50,
   ],
   [
@@ -1205,7 +1205,7 @@ const consumablesRecords = [
     40,
     0,
     null,
-    `/public/images/flopper.png`,
+    `/images/flopper.png`,
     50,
   ],
   [
@@ -1215,7 +1215,7 @@ const consumablesRecords = [
     0,
     40,
     null,
-    `/public/images/shield_fish.png`,
+    `/images/shield_fish.png`,
     50,
   ],
   [
@@ -1225,7 +1225,7 @@ const consumablesRecords = [
     20,
     20,
     null,
-    `/public/images/jelly_fish.png`,
+    `/images/jelly_fish.png`,
     50,
   ],
   [
@@ -1235,7 +1235,7 @@ const consumablesRecords = [
     15,
     0,
     `spicy`,
-    `/public/images/spicy_fish.png`,
+    `/images/spicy_fish.png`,
     50,
   ],
   [
@@ -1245,7 +1245,7 @@ const consumablesRecords = [
     40,
     40,
     null,
-    `/public/images/slurp_fish.png`,
+    `/images/slurp_fish.png`,
     50,
   ],
   [
@@ -1255,7 +1255,7 @@ const consumablesRecords = [
     40,
     0,
     `Turn all weapons in inventory to legendary`,
-    `/public/images/midas_flopper.png`,
+    `/images/midas_flopper.png`,
     50,
   ],
   [
@@ -1265,7 +1265,7 @@ const consumablesRecords = [
     40,
     0,
     `mark nearby players`,
-    `/public/images/vendetta_flopper.png`,
+    `/images/vendetta_flopper.png`,
     50,
   ],
 ];
