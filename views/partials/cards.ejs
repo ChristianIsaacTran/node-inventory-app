@@ -1,0 +1,25 @@
+<% let weaponsArr; %>
+<% let conArr;  %>
+<% let utilArr; %>
+<% for(const [key, value] of Object.entries(records)) { %>
+       <%  if(key === "weaponsRows") {  %>
+       <%      weaponsArr = value;  %>
+       <% } else if(key === "conRows") { %>
+       <%      conArr = value;  %>
+       <% }  else if(key === "utilRows") { %>
+       <%     utilRows = value;  %>
+       <% } else {  %>
+       <%      throw new Error("Array not found.");  %>
+       <% }  %>
+<% } %>
+<ul class="weapons-group">
+<% weaponsArr.forEach((weapon) => { %>
+    <li>
+        <img src="<%= weapon.image_url%>" alt="weapon-image">
+        <h2><%= weapon.item_name%></h2>
+        <h3><%= weapon.type%></h3>
+        <h4><%= weapon.rarity%></h4>
+
+    </li>
+<% }); %>
+</ul>
