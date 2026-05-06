@@ -10,12 +10,12 @@
   --fortnite-light-blue: #6db8fa;
   --fortnite-purple: #9d4dbb;
   --common-rarity: radial-gradient(white 30%, grey 100%);
-  --uncommon-rarity: radial-gradient(white 30%, grey 100%);
-  --rare-rarity: radial-gradient(white 30%, grey 100%);
-  --epic-rarity: radial-gradient(white 30%, grey 100%);
-  --legendary-rarity: radial-gradient(white 30%, grey 100%);
-  --mythic-rarity: radial-gradient(white 30%, grey 100%);
-  --exotic-rarity: radial-gradient(white 30%, grey 100%);
+  --uncommon-rarity: radial-gradient( rgb(160, 212, 160) 10%, green 90%);
+  --rare-rarity: radial-gradient(rgb(177, 177, 226) 10%, blue 90%);
+  --epic-rarity: radial-gradient(rgb(184, 174, 184) 10%, purple 90%);
+  --legendary-rarity: radial-gradient(rgb(214, 189, 143) 10%, orange 90%);
+  --mythic-rarity: radial-gradient(rgb(233, 233, 136) 10%, rgb(177, 177, 0) 90%);
+  --exotic-rarity: radial-gradient(white 10%, turquoise 90%);
 }
 
 html,

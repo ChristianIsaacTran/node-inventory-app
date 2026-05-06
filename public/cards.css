@@ -43,6 +43,11 @@ hr {
   color: white;
 }
 
+.card-rarity {
+    width: 100%;
+    text-align: center;
+}
+
 .common {
   background: var(--common-rarity);
 }
@@ -90,7 +95,7 @@ hr {
 }
 
 .card-rarity.mythic {
-    background: rgb(252, 255, 69);
+    background: rgb(177, 177, 0);
 }
 
 .exotic {
