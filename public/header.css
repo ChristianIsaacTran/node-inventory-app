@@ -1,9 +1,22 @@
 header {
-    grid-area: header;
-    background-color: var(--fortnite-deep-blue);
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    padding-left: 30px;
-    font-size: 3rem;
+  grid-area: header;
+  background-color: var(--fortnite-deep-blue);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding-left: 30px;
+  font-size: 3rem;
+  z-index: 2;
+}
+
+header::after {
+  display: block;
+  content: "";
+  background-color: rgba(255, 255, 255);
+  left: 20px;
+  width: 850px;
+  height: 80px;
+  transform: skew(5deg);
+  position: absolute;
+  z-index: -1;
 }
