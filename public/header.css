@@ -1,6 +1,6 @@
 header {
     grid-area: header;
-    background-color: #4c51f7;
+    background-color: var(--fortnite-deep-blue);
     display: flex;
     justify-content: start;
     align-items: center;

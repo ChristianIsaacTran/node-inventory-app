@@ -1,3 +1,6 @@
+<head>
+    <link rel="stylesheet" href="/cards.css">
+</head>
 <% let weaponsArr; %>
 <% let conArr;  %>
 <% let utilArr; %>
@@ -7,18 +10,46 @@
        <% } else if(key === "conRows") { %>
        <%      conArr = value;  %>
        <% }  else if(key === "utilRows") { %>
-       <%     utilRows = value;  %>
+       <%     utilArr = value;  %>
        <% } else {  %>
        <%      throw new Error("Array not found.");  %>
        <% }  %>
 <% } %>
+
+<h1 class="group-title">Weapons</h1>
 <ul class="weapons-group">
 <% weaponsArr.forEach((weapon) => { %>
-    <li>
+    <li class="item-container weapon">
         <img src="<%= weapon.image_url%>" alt="weapon-image">
         <h2><%= weapon.item_name%></h2>
         <h3><%= weapon.type%></h3>
         <h4><%= weapon.rarity%></h4>
+
+    </li>
+<% }); %>
+</ul>
+
+<h1 class="group-title">Consumables</h1>
+<ul class="consumables-group">
+<% conArr.forEach((consumable) => { %>
+    <li class="item-container consumable">
+        <img src="<%= consumable.image_url%>" alt="consumable-image">
+        <h2><%= consumable.item_name%></h2>
+        <h3><%= consumable.type%></h3>
+        <h4><%= consumable.rarity%></h4>
+
+    </li>
+<% }); %>
+</ul>
+
+<h1 class="group-title">Utilities</h1>
+<ul class="utilities-group">
+<% utilArr.forEach((utility) => { %>
+    <li class="item-container utility">
+        <img src="<%= utility.image_url%>" alt="utility-image">
+        <h2><%= utility.item_name%></h2>
+        <h3><%= utility.type%></h3>
+        <h4><%= utility.rarity%></h4>
 
     </li>
 <% }); %>

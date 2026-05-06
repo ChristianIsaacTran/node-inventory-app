@@ -1,0 +1,20 @@
+
+.weapons-group,
+.consumables-group,
+.utilities-group {
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    max-height: 100vh;
+    overflow: scroll;
+}
+
+.item-container > img {
+    max-width: 300px;
+}
+
+.group-title {
+  font-size: 2rem;
+  color: white;
+  font-style: italic;
+}
