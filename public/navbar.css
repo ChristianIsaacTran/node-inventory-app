@@ -1,12 +1,71 @@
 .side-navbar {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 100px;
   font-size: 2rem;
-  background-color: var(--fortnite-light-blue);
+  background-color: #000475;
   padding: 40px;
   margin: 0;
   min-height: 100%;
+  box-shadow: 4px 0px 15px 0;
+  position: relative;
+  z-index: 10;
+  align-items: start;
+}
+
+.link-background > a {
+  display: block;
+  text-decoration: none;
+  font-size: 3rem;
+  width: 100%;
+  color: var(--fortnite-light-blue);
+  font-style: italic;
+  position: relative;
+  z-index: 10;
+}
+
+.link-background > a:hover {
+  color: black;
+}
+
+.link-background > a::before {
+    display: block;
+  content: "";
+  width: 0%;
+  height: 100%;
+  background-color: white;
+  position: absolute;
+  border-bottom: 15px white solid;
+  border-left: 418px green solid;
+  border-top: 15px blue solid;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  
+}
+
+/* .link-background > a:hover::before {
+   display: block;
+  content: "";
+  width: 110%;
+  height: 0%;
+  background-color: white;
+  position: absolute;
+  border-bottom: 15px transparent solid;
+  border-left: 418px white solid;
+  border-top: 15px transparent solid;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+  
+
+} */
+
+.link-background {
+  background-color: rgb(0, 0, 0, 60%);
+  width: 100%;
+  padding: 20px;
+  z-index: -2;
 }
 
 .grid-navbar {
