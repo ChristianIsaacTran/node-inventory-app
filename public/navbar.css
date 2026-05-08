@@ -28,38 +28,41 @@
   color: black;
 }
 
-.link-background > a::before {
-    display: block;
+
+
+.link-background > a:hover::before {
+  display: block;
   content: "";
   width: 0%;
-  height: 100%;
-  background-color: white;
+  height: 120%;
   position: absolute;
-  border-bottom: 15px white solid;
-  border-left: 418px green solid;
-  border-top: 15px blue solid;
+  border-bottom: 10px transparent solid;
+  border-left: 418px white solid;
+  border-top: 30px transparent solid;
   z-index: -1;
   right: 0;
   bottom: 0;
-  
+  left: 0;
+  transform: scale(1.2) rotate(-2deg);
+ 
 }
 
-/* .link-background > a:hover::before {
-   display: block;
+
+.link-background > a:hover::after {
+  display: block;
   content: "";
-  width: 110%;
-  height: 0%;
-  background-color: white;
+  width: 0%;
+  height: 120%;
   position: absolute;
-  border-bottom: 15px transparent solid;
-  border-left: 418px white solid;
-  border-top: 15px transparent solid;
-  z-index: -1;
+  border-bottom: 10px transparent solid;
+  border-left: 352px var(--fortnite-light-blue) solid;
+  border-top: 30px transparent solid;
+  z-index: -2;
   right: 0;
   bottom: 0;
-  
-
-} */
+  left: 33px;
+  transform: scale(1.5) rotate(1deg);
+}
 
 .link-background {
   background-color: rgb(0, 0, 0, 60%);
