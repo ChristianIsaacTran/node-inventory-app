@@ -26,6 +26,10 @@
         <h4 class="card-rarity <%= weapon.rarity %>"><%= weapon.rarity%></h4>
         <h2><%= weapon.item_name%></h2>
         <h3><%= weapon.type%></h3>
+            <div class="route-group">
+                <a class="details-link" href="/details?name=<%=weapon.item_name%>&rarity=<%=weapon.rarity%>">DETAILS</button>
+                <a class="delete-link" href="/delete?name=<%=weapon.item_name%>&rarity=<%=weapon.rarity%>" onclick="return confirm('Are you sure? The item will be deleted from the database.')">DELETE</a>
+            </div>
         </div>
         
 
@@ -61,8 +65,6 @@
         <h2><%= utility.item_name%></h2>
         <h3><%= utility.type%></h3>
         </div>
-        
-
     </li>
 <% }); %>
 </ul>

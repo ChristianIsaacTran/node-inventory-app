@@ -16,6 +16,8 @@
   --legendary-rarity: radial-gradient(rgb(214, 189, 143) 10%, orange 90%);
   --mythic-rarity: radial-gradient(rgb(233, 233, 136) 10%, rgb(177, 177, 0) 90%);
   --exotic-rarity: radial-gradient(white 10%, turquoise 90%);
+  --fortnite-yellow-button: #efea12;
+  --fortnite-light-yellow-button: #fefb74;
 }
 
 html,

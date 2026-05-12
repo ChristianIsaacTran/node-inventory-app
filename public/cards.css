@@ -57,8 +57,8 @@ hr {
 }
 
 .card-rarity {
-    width: 100%;
-    text-align: center;
+  width: 100%;
+  text-align: center;
 }
 
 .common {
@@ -68,8 +68,6 @@ hr {
 .card-rarity.common {
   background: grey;
 }
-
-
 
 .uncommon {
   background: var(--uncommon-rarity);
@@ -92,7 +90,7 @@ hr {
 }
 
 .card-rarity.epic {
-    background: purple;
+  background: purple;
 }
 
 .legendary {
@@ -100,7 +98,7 @@ hr {
 }
 
 .card-rarity.legendary {
-    background: orange;
+  background: orange;
 }
 
 .mythic {
@@ -108,7 +106,7 @@ hr {
 }
 
 .card-rarity.mythic {
-    background: rgb(177, 177, 0);
+  background: rgb(177, 177, 0);
 }
 
 .exotic {
@@ -116,5 +114,62 @@ hr {
 }
 
 .card-rarity.exotic {
-    background: turquoise
+  background: turquoise;
+}
+
+.route-group {
+  font-family: "fortniteFont";
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.details-link,
+.delete-link {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+}
+
+.details-link {
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+}
+
+.details-link::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(
+    #8d8b00 0%,
+    var(--fortnite-yellow-button) 30%,
+    var(--fortnite-yellow-button) 90%,
+    var(--fortnite-light-yellow-button) 100%
+  );
+  transform: skew(-5deg);
+  z-index: -1;
+}
+
+.details-link::before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  left: -13px;
+  bottom: 0;
+  right: 0;
+  top: -10px;
+  background-color: var(--fortnite-light-yellow-button);
+  position: absolute;
+  z-index: -10;
+}
+
+.delete-link {
+  background-color: red;
+  padding: 20px;
 }
