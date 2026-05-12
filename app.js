@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("node:path");
 const homeRouter = require("./routes/homeRouter");
+const detailsRouter = require("./routes/detailsRouter");
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use(express.static(staticPath));
 
 // routers and routes
 app.use("/", homeRouter);
+app.use("/details", detailsRouter);
 
 const currentPort = process.env.PORT || 3000;
 
