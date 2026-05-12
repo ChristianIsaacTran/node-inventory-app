@@ -1,4 +1,5 @@
 const db = require("../db/dbQueries");
+
 async function displayDetails(req, res) {
     const itemName = req.query.name;
     const itemRarity = req.query.rarity;

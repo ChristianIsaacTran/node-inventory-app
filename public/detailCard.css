@@ -1,0 +1,34 @@
+.detail-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item-stock,
+.card-rarity,
+.item-name,
+.item-category {
+  color: white;
+}
+
+.card-rarity {
+  font-size: 3rem;
+  padding: 20px;
+}
+
+.item-info-group {
+    gap: 30px;
+    background-color: rgb(0, 0, 0, 60%);
+    padding: 30px;
+}
+
+.item-stock {
+    font-size: 3rem;
+}
+
+.item-name {
+  text-align: center;
+  background-color: rgb(0, 0, 0, 60%);
+  padding: 20px;
+  font-size: 4rem;
+}

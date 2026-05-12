@@ -1,2 +1,22 @@
+<head>
+    <link rel="stylesheet" href="/cards.css">
+    <link rel="stylesheet" href="/detailCard.css">
+</head>
+<div class="detail-card">
+<%if(itemCategory === "weapon") {%>
+    <h1 class="item-name"><%= item.item_name%></h1>
+    <img src="<%= item.image_url%>" alt="weapon-image" class="<%= item.rarity  %>">
+    <div class="item-info-group">
+        <h1 class="card-rarity <%= item.rarity %>">Rarity: <%= item.rarity%></h1>
+        <h1 class="item-stock">Stock: <%= item.amount%></h1>
+        <h1 class="item-category">Item Category: <%= item.type%></h1>
+    </div>
+<%} else if (itemCategory === "consumable") {%>
 
- 
+
+<%} else if (itemCategory === "utility") {%>
+
+<%} else { %>
+
+<%}%>
+</div>
