@@ -7,7 +7,6 @@ async function displayDetails(req, res) {
     // should be an array with a single item returned
     const item = await db.findItem(itemName, itemRarity); 
 
-    console.log(item);
 
     res.render("details", {name: itemName, rarity: itemRarity, item: item.recordArr[0], itemCategory: item.itemCategory});
 }

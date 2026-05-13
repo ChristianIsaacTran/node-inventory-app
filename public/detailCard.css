@@ -3,6 +3,16 @@
   flex-direction: column;
   gap: 20px;
   color: white;
+  max-width: 60%;
+}
+
+.img-center-box {
+    display: flex;
+    justify-content: center;
+}
+
+.detail-card > img {
+    max-width: 500px;
 }
 
 .item-stat-title {

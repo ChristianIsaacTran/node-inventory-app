@@ -47,6 +47,10 @@
         <h4 class="card-rarity <%= consumable.rarity %>"><%= consumable.rarity%></h4>
         <h2><%= consumable.item_name%></h2>
         <h3><%= consumable.type%></h3>
+            <div class="route-group">
+                <a class="details-link" href="/details?name=<%=consumable.item_name%>&rarity=<%=consumable.rarity%>">DETAILS</button>
+                <a class="delete-link" href="/delete?name=<%=consumable.item_name%>&rarity=<%=consumable.rarity%>" onclick="return confirm('Are you sure? The item will be deleted from the database.')">DELETE</a>
+            </div>
         </div>
         
 
@@ -64,6 +68,10 @@
         <h4 class="card-rarity <%= utility.rarity %>"><%= utility.rarity%></h4>
         <h2><%= utility.item_name%></h2>
         <h3><%= utility.type%></h3>
+            <div class="route-group">
+                <a class="details-link" href="/details?name=<%=utility.item_name%>&rarity=<%=utility.rarity%>">DETAILS</button>
+                <a class="delete-link" href="/delete?name=<%=utility.item_name%>&rarity=<%=utility.rarity%>" onclick="return confirm('Are you sure? The item will be deleted from the database.')">DELETE</a>
+            </div>
         </div>
     </li>
 <% }); %>

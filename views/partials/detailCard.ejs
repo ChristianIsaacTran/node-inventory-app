@@ -5,7 +5,7 @@
 <div class="detail-card">
 <%if(itemCategory === "weapon") {%>
     <h1 class="item-name"><%= item.item_name%></h1>
-    <img src="<%= item.image_url%>" alt="weapon-image" class="<%= item.rarity  %>">
+    <div class="img-center-box"><img src="<%= item.image_url%>" alt="weapon-image" class="<%= item.rarity  %>"></div>
     <h1 class="item-stat-title">Item Stats:</h1>
     <div class="item-info-group">
         <h1 class="card-rarity <%= item.rarity %>">Rarity: <%= item.rarity%></h1>
@@ -20,11 +20,32 @@
         <h1>Reload Time: <%= item.reload_time%></h1>
     </div>
 <%} else if (itemCategory === "consumable") {%>
-
-
+    <h1 class="item-name"><%= item.item_name%></h1>
+    <div class="img-center-box"><img src="<%= item.image_url%>" alt="consumable-image" class="<%= item.rarity  %>"></div>
+    <h1 class="item-stat-title">Item Stats:</h1>
+    <div class="item-info-group">
+        <h1 class="card-rarity <%= item.rarity %>">Rarity: <%= item.rarity%></h1>
+        <h1 class="item-stock">Stock: <%= item.amount%></h1>
+        <h1 class="item-category">Item Category: <%= item.type%></h1>
+        <h1 class="heal-amount">Heal: <%= item.heal_amount%></h1>
+        <h1>Shield: <%= item.shield_amount  %></h1>
+        <%if(item.effect !== null) { %>
+            <h1>Item Effect: <%= item.effect %></h1>
+        <% } %>
+    </div>
 <%} else if (itemCategory === "utility") {%>
-
+    <h1 class="item-name"><%= item.item_name%></h1>
+    <div class="img-center-box"><img src="<%= item.image_url%>" alt="weapon-image" class="<%= item.rarity  %>"></div>
+    <h1 class="item-stat-title">Item Stats:</h1>
+    <div class="item-info-group">
+        <h1 class="card-rarity <%= item.rarity %>">Rarity: <%= item.rarity%></h1>
+        <h1 class="item-stock">Stock: <%= item.amount%></h1>
+        <h1 class="item-category">Item Category: <%= item.type%></h1>
+        <h1 class="bullet-type">Bullet Type: <%= item.bullet_type%></h1>
+        <h1>Max Stack: <%= item.max_stack  %></h1>
+        <h1>Description: <%= item.item_description %></h1>
+    </div>
 <%} else { %>
-
+    <h1>Error: Item not found in database.</h1>
 <%}%>
 </div>
