@@ -2,14 +2,45 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.item-stock,
-.card-rarity,
-.item-name,
-.item-category {
   color: white;
 }
+
+.item-stat-title {
+    text-align: center;
+    font-size: 5rem;
+    text-decoration: underline;
+    position: relative;
+    z-index: 2;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.item-stat-title::after {
+    content: "";
+    background-color:  #18194e;
+    width: 110%;
+    height: 130%;
+    top: -15px;
+    right: -30px;
+    position: absolute;
+    z-index: -2;
+
+}
+
+.item-stat-title::before {
+    content: "";
+    background: linear-gradient( #000475, var(--fortnite-deep-blue));
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    transform: skew(5deg)
+}
+
+
 
 .card-rarity {
   font-size: 3rem;
@@ -25,6 +56,8 @@
 .item-stock {
     font-size: 3rem;
 }
+
+
 
 .item-name {
   text-align: center;

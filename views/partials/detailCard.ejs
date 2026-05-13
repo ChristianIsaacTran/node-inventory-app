@@ -6,12 +6,18 @@
 <%if(itemCategory === "weapon") {%>
     <h1 class="item-name"><%= item.item_name%></h1>
     <img src="<%= item.image_url%>" alt="weapon-image" class="<%= item.rarity  %>">
+    <h1 class="item-stat-title">Item Stats:</h1>
     <div class="item-info-group">
         <h1 class="card-rarity <%= item.rarity %>">Rarity: <%= item.rarity%></h1>
         <h1 class="item-stock">Stock: <%= item.amount%></h1>
         <h1 class="item-category">Item Category: <%= item.type%></h1>
-        <h1>Bullet Type: <%= item.bullet_type%></h1>
-    
+        <h1 class="bullet-type">Bullet Type: <%= item.bullet_type%></h1>
+        <h1>Mag Size: <%= item.mag_size  %></h1>
+        <h1>Damage: <%= item.damage%></h1>
+        <h1>DPS: <%= item.dps%></h1>
+        <h1>Crit Damage: <%= item.crit%></h1>
+        <h1>Fire Rate: <%= item.fire_rate%></h1>
+        <h1>Reload Time: <%= item.reload_time%></h1>
     </div>
 <%} else if (itemCategory === "consumable") {%>
 
