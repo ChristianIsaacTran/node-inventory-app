@@ -28,7 +28,7 @@
         <h3><%= weapon.type%></h3>
             <div class="route-group">
                 <a class="details-link" href="/details?name=<%=weapon.item_name%>&rarity=<%=weapon.rarity%>">DETAILS</button>
-                <a class="delete-link" href="/delete?name=<%=weapon.item_name%>&rarity=<%=weapon.rarity%>" onclick="return confirm('Are you sure? The item will be deleted from the database.')">DELETE</a>
+                <a class="delete-link" href="/delete?name=<%=weapon.item_name%>&rarity=<%=weapon.rarity%>&category=<%= weapon.type %>" onclick="return confirm('Are you sure? The item will be deleted from the database.')">DELETE</a>
             </div>
         </div>
         
@@ -49,7 +49,7 @@
         <h3><%= consumable.type%></h3>
             <div class="route-group">
                 <a class="details-link" href="/details?name=<%=consumable.item_name%>&rarity=<%=consumable.rarity%>">DETAILS</button>
-                <a class="delete-link" href="/delete?name=<%=consumable.item_name%>&rarity=<%=consumable.rarity%>" onclick="return confirm('Are you sure? The item will be deleted from the database.')">DELETE</a>
+                <a class="delete-link" href="/delete?name=<%=consumable.item_name%>&rarity=<%=consumable.rarity%>&category=<%= consumable.type %>" onclick="return confirm('Are you sure? The item will be deleted from the database.')">DELETE</a>
             </div>
         </div>
         
@@ -70,7 +70,7 @@
         <h3><%= utility.type%></h3>
             <div class="route-group">
                 <a class="details-link" href="/details?name=<%=utility.item_name%>&rarity=<%=utility.rarity%>">DETAILS</button>
-                <a class="delete-link" href="/delete?name=<%=utility.item_name%>&rarity=<%=utility.rarity%>" onclick="return confirm('Are you sure? The item will be deleted from the database.')">DELETE</a>
+                <a class="delete-link" href="/delete?name=<%=utility.item_name%>&rarity=<%=utility.rarity%>&category=<%= utility.type %>" onclick="return confirm('Are you sure? The item will be deleted from the database.')">DELETE</a>
             </div>
         </div>
     </li>

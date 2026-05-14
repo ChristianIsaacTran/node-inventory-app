@@ -1,6 +1,28 @@
 const pool = require("./pool");
 const format = require("pg-format");
 
+// utility function. Checks if the category found in rows array from result object is from the weapon category. Returns a boolean. For use in findItem() and deleteItem()
+async function isWeaponCategory(category) {
+  const categoryArr = [
+    "assault rifle",
+    "shotgun",
+    "submachine gun",
+    "pistol",
+    "sniper rifle",
+    "marksman rifle",
+    "explosive weapon",
+    "special weapon",
+  ];
+
+  let isWeapon = false;
+
+  if (categoryArr.includes(category)) {
+    isWeapon = true;
+  }
+
+  return isWeapon;
+}
+
 // returns an object containing an array of all entries from weapons table, utilities table, and consumables table
 async function getAllItems() {
   try {
@@ -138,13 +160,13 @@ async function findItem(name, rarity) {
     // check if result rows is 0. If it is not 0, then return that rows of data
     if (weaponsRows.length !== 0) {
       // console.log(weaponsRows);
-      return { recordArr: weaponsRows, itemCategory: "weapon"};
+      return { recordArr: weaponsRows, itemCategory: "weapon" };
     } else if (consumablesRows.length !== 0) {
       // console.log(consumablesRows);
-      return { recordArr: consumablesRows, itemCategory: "consumable"};
+      return { recordArr: consumablesRows, itemCategory: "consumable" };
     } else if (utilitiesRows.length !== 0) {
       // console.log(utilitiesRows);
-      return { recordArr: utilitiesRows, itemCategory: "utility"};
+      return { recordArr: utilitiesRows, itemCategory: "utility" };
     }
 
     return new Error("Error: No entries found in db tables.");
@@ -154,4 +176,55 @@ async function findItem(name, rarity) {
   }
 }
 
-module.exports = { getAllItems, findItem };
+// deletes an item from the database through the delete route through query params
+async function deleteItem(name, rarity, category) {
+  /*
+    Added a category parameter to narrow down what table to query from. 
+    *Should add category to findItem function to prevent 3 queries*
+  */
+  try {
+    // check if the item to delete IS a weapon, then run weapon query.
+    if (await isWeaponCategory(category)) {
+      const weaponDeleteQuery = `
+      DELETE FROM weapons AS t1 
+      USING rarity_type AS t2
+      WHERE t1.item_rarity = t2.id 
+      AND t1.item_name = $1 
+      AND t2.rarity = $2`;
+      
+      await pool.query(weaponDeleteQuery, [`${name}`, `${rarity}`]);
+      return console.log("Item successfully deleted.");
+    } else if (category === "consumable") {
+      // run consumable query if item is a consumable
+      const consumableDeleteQuery = `
+      DELETE FROM consumables AS t1 
+      USING rarity_type AS t2
+      WHERE t1.item_rarity = t2.id 
+      AND t1.item_name = $1 
+      AND t2.rarity = $2`;
+      
+      await pool.query(consumableDeleteQuery, [`${name}`, `${rarity}`]);
+      return console.log("Item successfully deleted.");
+    } else if (category === "utility") {
+      // run utility query if item is a utility
+      const utilityDeleteQuery = `
+      DELETE FROM utilities AS t1 
+      USING rarity_type AS t2
+      WHERE t1.item_rarity = t2.id 
+      AND t1.item_name = $1 
+      AND t2.rarity = $2`;
+  
+      await pool.query(utilityDeleteQuery, [`${name}`, `${rarity}`]);
+      return console.log("Item successfully deleted.");
+    } else {
+      // return error if no item category is found
+      console.log("ERROR: no item category found");
+      return new Error("ERROR: no item category found.");
+    }
+  } catch (error) {
+    console.log(error);
+    return new Error(error);
+  }
+}
+
+module.exports = { getAllItems, findItem, deleteItem };
