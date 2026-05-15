@@ -69,7 +69,7 @@ main {
   gap: 20px;
 }
 
-.all-items {
+.route-title {
   color: white;
   min-width: 100%;
   padding: 20px;
@@ -79,7 +79,7 @@ main {
   z-index: 2;
 }
 
-.all-items::after {
+.route-title::after {
   display: block;
   content: "";
   background-color: rgb(0, 0, 0, 50%);

@@ -3,14 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Item Details: <%= name %></title>
+    <title>Update Item</title>
     <link rel="stylesheet" href="/home.css" />
+    <link rel="stylesheet" href="/update.css" />
   </head>
   <body>
     <%- include("./partials/header") %> <%- include("./partials/navbar") %>
+    <!-- render a unique form depending on the category of item being updated -->
     <main>
-      <h1 class="route-title">Item Details</h1>
-      <%- include("./partials/detailCard") %>
+      <h1 class="route-title">Update Item</h1>
+      <%- include("./partials/updateForm") %>
     </main>
   </body>
 </html>

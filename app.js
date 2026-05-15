@@ -3,6 +3,7 @@ const path = require("node:path");
 const homeRouter = require("./routes/homeRouter");
 const detailsRouter = require("./routes/detailsRouter");
 const deleteRouter = require("./routes/deleteRouter");
+const updateRouter = require("./routes/updateRouter");
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use(express.static(staticPath));
 app.use("/", homeRouter);
 app.use("/details", detailsRouter);
 app.use("/delete", deleteRouter);
+app.use("/update", updateRouter);
 
 const currentPort = process.env.PORT || 3000;
 
