@@ -1,6 +1,6 @@
 const db = require("../db/dbQueries");
-
 const {body, matchedData, validationResult} = require("express-validator");
+
 
 // on initial update path, use query params to find and display current db info on found item in a form.
 async function renderUpdateForm(req, res) {
@@ -15,11 +15,25 @@ async function renderUpdateForm(req, res) {
     res.render("update", {item: foundItem.recordArr[0], category: foundItem.itemCategory});
 }
 
-// on POST request upon form submission, send the update info for the item being updated to the database and redirect back to home route
-async function updateItemPost(req, res) {
-    console.log("test");
+
+// on POST request upon form submission, send the update info for the item being updated to the database and redirect back to home route.
+const updateItemPost = async(req, res) => {
+
+    const requestCategory = req.query.category;
+
+    if(requestCategory === "weapon") {
+        console.log("weapon");
+    } else if(requestCategory === "consumable") {
+        console.log("consumable");
+    } else if(requestCategory === "utility") {
+        console.log("utility");
+    } else {
+        return new Error("Error: category not found for update operation.");
+    }
+
+
 
     res.redirect("/");
-}
+};
 
 module.exports = { renderUpdateForm, updateItemPost };
