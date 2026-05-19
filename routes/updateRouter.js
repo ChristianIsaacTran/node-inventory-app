@@ -5,8 +5,6 @@ const updateRouter = Router();
 
 updateRouter.get("/", updateController.renderUpdateForm);
 
-updateRouter.post("/", (req, res) => {
-    console.log("placeholder");
-});
+updateRouter.post("/", updateController.updateItemPost);
 
 module.exports = updateRouter;

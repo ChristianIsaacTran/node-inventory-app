@@ -15,4 +15,11 @@ async function renderUpdateForm(req, res) {
     res.render("update", {item: foundItem.recordArr[0], category: foundItem.itemCategory});
 }
 
-module.exports = { renderUpdateForm };
+// on POST request upon form submission, send the update info for the item being updated to the database and redirect back to home route
+async function updateItemPost(req, res) {
+    console.log("test");
+
+    res.redirect("/");
+}
+
+module.exports = { renderUpdateForm, updateItemPost };

@@ -21,10 +21,10 @@
   font-family: fortniteFont;
 }
 
-input, 
+input,
 select {
-    font-family: fortniteFont;
-    font-size: 2rem;
+  font-family: fortniteFont;
+  font-size: 2rem;
 }
 
 label {
@@ -141,6 +141,11 @@ input {
   font-size: 3rem;
 }
 
+.form-submit:hover {
+  color: white;
+  transition: color 0.5s;
+}
+
 .form-submit::before {
   content: "";
   width: 103%;
@@ -152,6 +157,11 @@ input {
   background-color: #999abd;
   position: absolute;
   z-index: -10;
+  transition: background-color 0.5s;
+}
+
+.form-submit:hover::before {
+  background-color: lightgreen;
 }
 
 .form-submit::after {
@@ -167,8 +177,15 @@ input {
     #252bda 90%,
     var(--fortnite-deep-blue) 100%
   );
+  background-color: none;
   transform: skew(-5deg);
   z-index: -1;
+  transition: background-color 0.5s;
+}
+
+.form-submit:hover::after {
+  background: none;
+  background-color: green;
 }
 
 .consumable-update-form {
@@ -266,4 +283,3 @@ input {
 .utility-update-form > #img-link {
   grid-area: input7;
 }
-
