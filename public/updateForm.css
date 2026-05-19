@@ -1,0 +1,163 @@
+.weapon-update-form {
+  display: grid;
+
+  grid-template-areas:
+    "input-name1 input1"
+    "input-name2 input2"
+    "input-name3 input3"
+    "input-name4 input4"
+    "input-name5 input5"
+    "input-name6 input6"
+    "input-name7 input7"
+    "input-name8 input8"
+    "input-name9 input9"
+    "input-name10 input10"
+    "input-name11 input11"
+    "submit submit";
+
+  row-gap: 20px;
+  column-gap: 250px;
+  font-family: fortniteFont;
+}
+
+input, 
+select {
+    font-family: fortniteFont;
+    font-size: 2rem;
+}
+
+label {
+  color: white;
+  font-size: 2rem;
+}
+
+input {
+  width: 500px;
+}
+
+#item-name-label {
+  grid-area: input-name1;
+}
+
+#item-name {
+  grid-area: input1;
+}
+
+#item-category-label {
+  grid-area: input-name2;
+}
+
+#item-category {
+  grid-area: input2;
+}
+
+#item-rarity-label {
+  grid-area: input-name3;
+}
+
+#item-rarity {
+  grid-area: input3;
+}
+
+#bullet-type-label {
+  grid-area: input-name4;
+}
+
+#bullet-type {
+  grid-area: input4;
+}
+
+#mag-size-label {
+  grid-area: input-name5;
+}
+
+#mag-size {
+  grid-area: input5;
+}
+
+#damage-label {
+  grid-area: input-name6;
+}
+
+#damage {
+  grid-area: input6;
+}
+
+#dps-label {
+  grid-area: input-name7;
+}
+
+#dps {
+  grid-area: input7;
+}
+
+#crit-label {
+  grid-area: input-name8;
+}
+
+#crit {
+  grid-area: input8;
+}
+
+#fire-rate-label {
+  grid-area: input-name9;
+}
+
+#fire-rate {
+  grid-area: input9;
+}
+
+#reload-time-label {
+  grid-area: input-name10;
+}
+
+#reload-time {
+  grid-area: input10;
+}
+
+#img-link-label {
+  grid-area: input-name11;
+}
+
+#img-link {
+  grid-area: input11;
+}
+
+.form-submit {
+  font-family: fortniteFont;
+  grid-area: submit;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+  font-size: 3rem;
+}
+
+.form-submit::before {
+  content: "";
+  width: 103%;
+  height: 120%;
+  left: -13px;
+  bottom: 0;
+  right: 0;
+  top: -10px;
+  background-color: #999abd;
+  position: absolute;
+  z-index: -10;
+}
+
+.form-submit::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(
+    #000475 0%,
+    #0008ff 30%,
+    #252bda 90%,
+    var(--fortnite-deep-blue) 100%
+  );
+  transform: skew(-5deg);
+  z-index: -1;
+}

@@ -1,14 +1,59 @@
 <!-- weapon update form -->
-
+<head>
+    <link rel="stylesheet" href="/updateForm.css">
+</head>
 <% if (category === "weapon") { %>
-    <form action="/update" method="post">
-        <label for=""></label>
-        <input type="text">
-        <label for=""></label>
-        <input type="text">
+    <form action="/update" method="post" class="weapon-update-form">
+        <label class="item-name-label" for="item-name ">Item name: </label>
+        <input id="item-name" type="text">
+        <label class="item-category-label" for="item-category ">Item category: </label>
+        <select id="item-category">
+            <option value="assault rifle">Assault Rifle</option>
+            <option value="shotgun">Shotgun</option>
+            <option value="submachine gun">Submachine Gun</option>
+            <option value="pistol">Pistol</option>
+            <option value="sniper rifle">Sniper Rifle</option>
+            <option value="marksman rifle">Marksman Rifle</option>
+            <option value="explosive weapon">Explosive Weapon</option>
+            <option value="special weapon">Special Weapon</option>
+        </select>
+        <label class="item-rarity-label" for="item-rarity">Item rarity: </label>
+        <select id="item-rarity">
+            <option value="common">Common</option>
+            <option value="uncommon">Uncommon</option>
+            <option value="rare">Rare</option>
+            <option value="epic">Epic</option>
+            <option value="legendary">Legendary</option>
+            <option value="mythic">Mythic</option>
+            <option value="exotic">Exotic</option>
+        </select>
+        <label class="bullet-type-label" for="bullet-type">Bullet Type: </label>
+        <select id="bullet-type">
+            <option value="light bullets">Light Bullets</option>
+            <option value="medium bullets">Medium Bullets</option>
+            <option value="heavy bullets">Heavy Bullets</option>
+            <option value="shells">Shells</option>
+            <option value="rockets">Rockets</option>
+            <option value="arrows">Arrows</option>
+            <option value="grenade">Grenade Charges</option>
+            <option value="special ammo">Special Charges/Ammo</option>
+        </select>
+        <label class="mag-size-label" for="mag-size">Mag Size: </label>
+        <input id="mag-size" type="number">
+        <label class="damage-label" for="damage">Damage: </label>
+        <input id="damage" type="number">
+        <label class="dps-label" for="dps">DPS: </label>
+        <input id="dps" type="number">
+        <label class="crit-label" for="crit">Crit Damage: </label>
+        <input id="crit" type="number">
+        <label class="fire-rate-label" for="fire-rate">Fire Rate: </label>
+        <input id="fire-rate" type="number">
+        <label class="reload-time-label" for="reload-time">Reload Time: </label>
+        <input id="reload-time" type="number">
+        <label class="img-link-label" for="img-link">Item Image Link: </label>
+        <input id="img-link" type="text">
+        <button class="form-submit" type="submit">Submit</button>
     </form>
-
-
 <% } else if(category === "consumable") { %>
    <form action="/update" method="post">
 
