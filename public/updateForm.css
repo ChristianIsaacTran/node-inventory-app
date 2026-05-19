@@ -13,6 +13,7 @@
     "input-name9 input9"
     "input-name10 input10"
     "input-name11 input11"
+    "input-name12 input12"
     "submit submit";
 
   row-gap: 20px;
@@ -35,92 +36,100 @@ input {
   width: 500px;
 }
 
-#item-name-label {
+.amount-label {
   grid-area: input-name1;
 }
 
-#item-name {
+#amount {
   grid-area: input1;
 }
 
-#item-category-label {
+.item-name-label {
   grid-area: input-name2;
 }
 
-#item-category {
+#item-name {
   grid-area: input2;
 }
 
-#item-rarity-label {
+.item-category-label {
   grid-area: input-name3;
 }
 
-#item-rarity {
+#item-category {
   grid-area: input3;
 }
 
-#bullet-type-label {
+.item-rarity-label {
   grid-area: input-name4;
 }
 
-#bullet-type {
+#item-rarity {
   grid-area: input4;
 }
 
-#mag-size-label {
+.bullet-type-label {
   grid-area: input-name5;
 }
 
-#mag-size {
+#bullet-type {
   grid-area: input5;
 }
 
-#damage-label {
+.mag-size-label {
   grid-area: input-name6;
 }
 
-#damage {
+#mag-size {
   grid-area: input6;
 }
 
-#dps-label {
+.damage-label {
   grid-area: input-name7;
 }
 
-#dps {
+#damage {
   grid-area: input7;
 }
 
-#crit-label {
+.dps-label {
   grid-area: input-name8;
 }
 
-#crit {
+#dps {
   grid-area: input8;
 }
 
-#fire-rate-label {
+.crit-label {
   grid-area: input-name9;
 }
 
-#fire-rate {
+#crit {
   grid-area: input9;
 }
 
-#reload-time-label {
+.fire-rate-label {
   grid-area: input-name10;
 }
 
-#reload-time {
+#fire-rate {
   grid-area: input10;
 }
 
-#img-link-label {
+.reload-time-label {
   grid-area: input-name11;
 }
 
-#img-link {
+#reload-time {
   grid-area: input11;
+}
+
+.weapon-update-form > .img-link-label {
+  grid-area: input-name12;
+}
+
+.weapon-update-form > #img-link {
+  grid-area: input12;
 }
 
 .form-submit {
@@ -161,3 +170,100 @@ input {
   transform: skew(-5deg);
   z-index: -1;
 }
+
+.consumable-update-form {
+  display: grid;
+
+  grid-template-areas:
+    "input-name1 input1"
+    "input-name2 input2"
+    "input-name3 input3"
+    "input-name4 input4"
+    "input-name5 input5"
+    "input-name6 input6"
+    "input-name7 input7"
+    "input-name8 input8"
+    "submit submit";
+
+  row-gap: 20px;
+  column-gap: 250px;
+  font-family: fortniteFont;
+}
+
+.heal-amount-label {
+  grid-area: input-name5;
+}
+
+#heal-amount {
+  grid-area: input5;
+}
+
+.shield-amount-label {
+  grid-area: input-name6;
+}
+
+#shield-amount {
+  grid-area: input6;
+}
+
+.effect-label {
+  grid-area: input-name7;
+}
+
+#effect {
+  grid-area: input7;
+}
+
+.consumable-update-form > .img-link-label {
+  grid-area: input-name8;
+}
+
+.consumable-update-form > #img-link {
+  grid-area: input8;
+}
+
+.utility-update-form {
+  display: grid;
+
+  grid-template-areas:
+    "input-name1 input1"
+    "input-name2 input2"
+    "input-name3 input3"
+    "input-name4 input4"
+    "input-name5 input5"
+    "input-name6 input6"
+    "input-name7 input7"
+    "submit submit";
+
+  row-gap: 20px;
+  column-gap: 250px;
+  font-family: fortniteFont;
+}
+
+.max-stacks-label {
+  grid-area: input-name5;
+}
+
+#max-stacks {
+  grid-area: input5;
+}
+
+.description-label {
+  grid-area: input-name6;
+}
+
+#description {
+  font-family: fortniteFont;
+  font-size: 1.5rem;
+  grid-area: input6;
+  resize: vertical;
+}
+
+.utility-update-form > .img-link-label {
+  grid-area: input-name7;
+}
+
+.utility-update-form > #img-link {
+  grid-area: input7;
+}
+
