@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="/updateForm.css">
 </head>
 <% if (category === "weapon") { %>
-    <form action="/update?category=<%=category%>" method="post" class="weapon-update-form">
+    <form action="/update/<%=category%>/<%=category%>?name=<%=item.item_name %>&rarity=<%= item.rarity %>" method="post" class="weapon-update-form">
         <label class="amount-label" for="amount">Amount: </label>
         <input type="number" id="amount" name="amount" value="<%= item.amount %>">
         <label class="item-name-label" for="item-name ">Item name: </label>
@@ -43,21 +43,21 @@
         <label class="mag-size-label" for="mag-size">Mag Size: </label>
         <input id="mag-size" type="number" name="magSize" value="<%= item.mag_size %>">
         <label class="damage-label" for="damage">Damage: </label>
-        <input id="damage" type="number" name="damage" value="<%= item.damage %>">
+        <input id="damage" type="number" name="damage" value="<%= item.damage %>" step="any">
         <label class="dps-label" for="dps">DPS: </label>
-        <input id="dps" type="number" name="dps" value="<%= item.dps %>">
+        <input id="dps" type="number" name="dps" value="<%= item.dps %>" step="any">
         <label class="crit-label" for="crit">Crit Damage: </label>
-        <input id="crit" type="number" name="crit" value="<%= item.crit %>">
+        <input id="crit" type="number" name="crit" value="<%= item.crit %>" step="any">
         <label class="fire-rate-label" for="fire-rate">Fire Rate: </label>
-        <input id="fire-rate" type="number" name="fireRate" value="<%= item.fire_rate %>">
+        <input id="fire-rate" type="number" name="fireRate" value="<%= item.fire_rate %>" step="any">
         <label class="reload-time-label" for="reload-time">Reload Time: </label>
-        <input id="reload-time" type="number" name="reloadTime" value="<%= item.reload_time %>">
+        <input id="reload-time" type="number" name="reloadTime" value="<%= item.reload_time %>" step="any">
         <label class="img-link-label" for="img-link">Item Image Link: </label>
         <input id="img-link" type="text" name="imgLink" value="<%= item.image_url %>">
         <button class="form-submit" type="submit">Submit</button>
     </form>
 <% } else if(category === "consumable") { %>
-   <form action="/update?category=<%=category%>" method="post" class="consumable-update-form">
+   <form action="/update/<%=category%>/<%=category%>?name=<%=item.item_name %>&rarity=<%= item.rarity %>" method="post" class="consumable-update-form">
         <label class="amount-label" for="amount">Amount: </label>
         <input type="number" id="amount" name="amount" value="<%= item.amount %>">
         <label class="item-name-label" for="item-name">Item name: </label>
@@ -77,9 +77,9 @@
             <option value="exotic">Exotic</option>
         </select>
         <label class="heal-amount-label" for="heal-amount">Heal Amount: </label>
-        <input id="heal-amount" type="number" name="healAmount" value="<%= item.heal_amount %>">
+        <input id="heal-amount" type="number" name="healAmount" value="<%= item.heal_amount %>" step="any">
         <label class="shield-amount-label" for="shield-amount">Shield Amount: </label>
-        <input id="shield-amount" type="number" name="shieldAmount" value="<%= item.shield_amount %>">
+        <input id="shield-amount" type="number" name="shieldAmount" value="<%= item.shield_amount %>" step="any">
         <label class="effect-label" for="effect">Item Effect: </label>        
         <input id="effect" type="text" name="effect" value="<%= item.effect %>">
         <label class="img-link-label" for="img-link">Item Image Link: </label>
@@ -87,7 +87,7 @@
         <button class="form-submit" type="submit">Submit</button>
     </form>
 <% } else if(category === "utility") { %>
-    <form action="/update?category=<%=category%>" method="post" class="utility-update-form">
+    <form action="/update/<%=category%>/<%=category%>?name=<%=item.item_name %>&rarity=<%= item.rarity %>" method="post" class="utility-update-form">
         <label class="amount-label" for="amount">Amount: </label>
         <input type="number" id="amount" name="amount" value="<%= item.amount %>">
         <label class="item-name-label" for="item-name">Item name: </label>

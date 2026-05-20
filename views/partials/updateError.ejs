@@ -1,0 +1,13 @@
+<% if(validationErr === true) { %>
+    <div class="error-container">
+        <h2>Form Error: </h2>
+        <ul>
+            <%validationArr.forEach((error) => { %>
+                <li><%= error.msg %></li>
+            <% });%>
+        </ul>
+    </div>
+
+
+
+<% } %>

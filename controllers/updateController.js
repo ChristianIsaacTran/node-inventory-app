@@ -12,28 +12,54 @@ async function renderUpdateForm(req, res) {
 
     console.log(foundItem);
 
-    res.render("update", {item: foundItem.recordArr[0], category: foundItem.itemCategory});
+    res.render("update", {item: foundItem.recordArr[0], category: foundItem.itemCategory, validationErr: false});
 }
 
+// weapon update validation 
 
-// on POST request upon form submission, send the update info for the item being updated to the database and redirect back to home route.
-const updateItemPost = async(req, res) => {
+const weaponChain = [
+    body("amount").notEmpty().withMessage("Amount must not be empty").trim().isNumeric().withMessage("Amount must be numeric."),
+    body("itemName").notEmpty().withMessage("Item Name must not be empty").trim(),
+    body("magSize").notEmpty().withMessage("Mag Size must not be empty").trim().isNumeric().withMessage("Mag Size must be numeric."),
+    body("damage").notEmpty().withMessage("Damage must not be empty").trim().isNumeric().withMessage("Damage must be numeric."),
+    body("dps").notEmpty().withMessage("DPS must not be empty").trim().isNumeric().withMessage("DPS must be numeric."),
+    body("crit").notEmpty().withMessage("Crit must not be empty").trim().isNumeric().withMessage("Crit must be numeric."), 
+    body("fireRate").notEmpty().withMessage("Fire Rate must not be empty").trim().isNumeric().withMessage("Fire Rate must be numeric."),
+    body("reloadTime").notEmpty().withMessage("Reload Time must not be empty").trim().isNumeric().withMessage("Reload Time must be numeric."),
+    body("imgLink").notEmpty().withMessage("Image Link must not be empty.").trim(),
+];
 
-    const requestCategory = req.query.category;
+// run update function for weapons 
+const updateWeapon = [weaponChain, async(req, res) => {
 
-    if(requestCategory === "weapon") {
-        console.log("weapon");
-    } else if(requestCategory === "consumable") {
-        console.log("consumable");
-    } else if(requestCategory === "utility") {
-        console.log("utility");
-    } else {
-        return new Error("Error: category not found for update operation.");
+    const result = validationResult(req);
+    
+    // if there are validation errors inside the result object, render error message
+    if(!result.isEmpty()) {
+        console.log("Validation error in updateWeapon.");
+
+        const currentItemName = req.query.name;
+        const currentItemRarity = req.query.rarity;
+
+        const foundItem = await db.findItem(currentItemName, currentItemRarity);
+
+        return res.status(400).render("update", {validationErr: true, validationArr: result.array(), category: req.params.category, item: foundItem.recordArr[0]});
     }
 
-
+    console.log("validation passed.");
 
     res.redirect("/");
-};
+}];
 
-module.exports = { renderUpdateForm, updateItemPost };
+// run update function for consumables
+const updateConsumable = [async(req,res) => {
+    return;
+
+}];
+
+// run update function for utilities
+const updateUtility = [async(req, res) => {
+    return;
+}];
+
+module.exports = { renderUpdateForm, updateWeapon, updateConsumable, updateUtility };
