@@ -175,15 +175,16 @@ the miscellaneous stuff, like building mats or vehicles, etc.
           - use exports.func for smaller files. Or I could just use
           module.exports to be consistent.
 
-- During any SQL operation other than SELECT that I need to reference another table from,
-  instead of JOIN, I had to use the unique postgreSQL keyword, "USING" with a WHERE clause to define
-  how to match the tables together. USING keyword is intended for any other operation other than SELECT
+- During DELETE operation, I need to reference another table.
+  Instead of JOIN, I had to use the unique postgreSQL keyword, "USING" with a WHERE clause to define
+  how to "join" the tables together. USING keyword is for postgreSQL DELETE operation specifically 
   to reference another table if I need it. For example, during the coding for the Delete button operation for
   the item cards, I had to use the USING keyword to reference the rarity_type table to match the rarity column with the input for
-  the dbQuery function, deleteItem(). Note that the "USING" keyword gives access to ALL the columns in the other table, but aliases are
+  the dbQuery function, deleteItem() to match the rarity type from the rarity table.
+  Note that the "USING" keyword gives access to ALL the columns in the other table, but aliases are
   recommended with the use of the USING keyword.
 
-  For example: PostgreSQL "USING" keyword to reference other tables for non-SELECT operations:
+  For example: PostgreSQL "USING" keyword to reference other tables for DELETE operations:
 
       DELETE FROM table1 AS t1
       USING table2 AS t2
@@ -192,9 +193,13 @@ the miscellaneous stuff, like building mats or vehicles, etc.
       AND t2.rarity = input_rarity
       AND some other condition if wanted;
 
-      - The USING keyword defines another table I can use for reference. Similar to a JOIN, but for other operations than SELECT. In this example, I am using a DELETE operation to delete records from table1 given with alias "t1". I used the "USING" keyword to reference table2 (with alias "t2") and then defined the relation condition in the WHERE clause with t1.item_rarity and t2.id to match (similar to an ON condition). Then I added any other conditions to the WHERE clause to filter and narrow down the records I want to delete from table1.
+      - The USING keyword defines another table I can use for reference. Similar to a JOIN, but for DELETE. In this example, I am using a DELETE operation to delete records from table1 given with alias "t1". I used the "USING" keyword to reference table2 (with alias "t2") and then defined the relation condition in the WHERE clause with t1.item_rarity and t2.id to match (similar to an ON condition). Then I added any other conditions to the WHERE clause to filter and narrow down the records I want to delete from table1.
 
-      - Note, this is UNIQUE to postgreSQL. Other SQL programs use different syntax to handle JOIN conditions with other operations other than SELECT operations.
+      - Note, this is UNIQUE to postgreSQL. Other SQL programs use different syntax to handle JOIN conditions with other operations other than SELECT operations. For exmaple, USING exists as a general SQL express as a shorthand to the ON clause for JOINS, but mySQL supports DELETE JOIN, but PostgreSQL doesn't support DELETE JOIN so the USING keyword needs to be used during a DELETE statement. 
+
+      - demonstration of USING with DELETE is here: https://neon.com/postgresql/tutorial/delete-join
+
+      - It also looks like postgreSQL also has quirks and different keywords when involving JOIN conditions on other operations like UPDATE and DELETE, but a quick google search helps.
 
 ## website layout
 
