@@ -26,7 +26,8 @@ const weaponChain = [
     .trim()
     .isNumeric()
     .withMessage("Amount must be numeric")
-    .isInt({min: 0}).withMessage("Amount must be an integer 0 or above"),
+    .isInt({ min: 0 })
+    .withMessage("Amount must be an integer 0 or above"),
   body("itemName").notEmpty().withMessage("Item Name must not be empty").trim(),
   body("magSize")
     .notEmpty()
@@ -34,42 +35,48 @@ const weaponChain = [
     .trim()
     .isNumeric()
     .withMessage("Mag Size must be numeric")
-    .isInt({min: 0}).withMessage("Mag Size must be an integer 0 or above"),
+    .isInt({ min: 0 })
+    .withMessage("Mag Size must be an integer 0 or above"),
   body("damage")
     .notEmpty()
     .withMessage("Damage must not be empty")
     .trim()
     .isNumeric()
     .withMessage("Damage must be numeric")
-    .isFloat({min: 0}).withMessage("Damage must be a float 0 or above"),
+    .isFloat({ min: 0 })
+    .withMessage("Damage must be a float 0 or above"),
   body("dps")
     .notEmpty()
     .withMessage("DPS must not be empty")
     .trim()
     .isNumeric()
     .withMessage("DPS must be numeric")
-    .isFloat({min: 0}).withMessage("DPS must be a float 0 or above"),
+    .isFloat({ min: 0 })
+    .withMessage("DPS must be a float 0 or above"),
   body("crit")
     .notEmpty()
     .withMessage("Crit must not be empty")
     .trim()
     .isNumeric()
     .withMessage("Crit must be numeric")
-    .isFloat({min: 0}).withMessage("Crit must be a float 0 or above"),
+    .isFloat({ min: 0 })
+    .withMessage("Crit must be a float 0 or above"),
   body("fireRate")
     .notEmpty()
     .withMessage("Fire Rate must not be empty")
     .trim()
     .isNumeric()
     .withMessage("Fire Rate must be numeric")
-    .isFloat({min: 0}).withMessage("Fire Rate must be a float 0 or above"),
+    .isFloat({ min: 0 })
+    .withMessage("Fire Rate must be a float 0 or above"),
   body("reloadTime")
     .notEmpty()
     .withMessage("Reload Time must not be empty")
     .trim()
     .isNumeric()
     .withMessage("Reload Time must be numeric")
-    .isFloat({min: 0}).withMessage("Reload Time must be a float 0 or above"),
+    .isFloat({ min: 0 })
+    .withMessage("Reload Time must be a float 0 or above"),
   body("imgLink").notEmpty().withMessage("Image Link must not be empty").trim(),
 ];
 
@@ -79,13 +86,11 @@ const updateWeapon = [
   async (req, res) => {
     const result = validationResult(req);
 
+    const currentItemName = req.query.name;
+    const currentItemRarity = req.query.rarity;
+
     // if there are validation errors inside the result object, render error message
     if (!result.isEmpty()) {
-      console.log("Validation error in updateWeapon.");
-
-      const currentItemName = req.query.name;
-      const currentItemRarity = req.query.rarity;
-
       const foundItem = await db.findItem(currentItemName, currentItemRarity);
 
       return res.status(400).render("update", {
@@ -96,7 +101,9 @@ const updateWeapon = [
       });
     }
 
-    console.log("validation passed.");
+    // if no validation errors, send request to database
+
+    await db.updateWeaponDB(currentItemName, currentItemRarity, req.body);
 
     res.redirect("/");
   },
@@ -110,7 +117,8 @@ const consumableChain = [
     .trim()
     .isNumeric()
     .withMessage("Amount must be numeric")
-    .isInt({min: 0}).withMessage("Amount must be an integer 0 or above"),
+    .isInt({ min: 0 })
+    .withMessage("Amount must be an integer 0 or above"),
   body("itemName").notEmpty().withMessage("Item Name must not be empty").trim(),
   body("healAmount")
     .notEmpty()
@@ -118,14 +126,16 @@ const consumableChain = [
     .trim()
     .isNumeric()
     .withMessage("Heal Amount must be numeric")
-    .isFloat({min: 0}).withMessage("Heal Amount must be a float 0 or above"),
+    .isFloat({ min: 0 })
+    .withMessage("Heal Amount must be a float 0 or above"),
   body("shieldAmount")
     .notEmpty()
     .withMessage("Shield Amount must not be empty")
     .trim()
     .isNumeric()
     .withMessage("Shield Amount must be numeric")
-    .isFloat({min: 0}).withMessage("Shield Amount must be a float 0 or above"),
+    .isFloat({ min: 0 })
+    .withMessage("Shield Amount must be a float 0 or above"),
   body("effect").trim(),
   body("imgLink").notEmpty().withMessage("Image Link must not be empty").trim(),
 ];
@@ -136,13 +146,11 @@ const updateConsumable = [
   async (req, res) => {
     const result = validationResult(req);
 
+    const currentItemName = req.query.name;
+    const currentItemRarity = req.query.rarity;
+
     // if there are validation errors inside the result object, render error message
     if (!result.isEmpty()) {
-      console.log("Validation error in updateWeapon.");
-
-      const currentItemName = req.query.name;
-      const currentItemRarity = req.query.rarity;
-
       const foundItem = await db.findItem(currentItemName, currentItemRarity);
 
       return res.status(400).render("update", {
@@ -153,7 +161,7 @@ const updateConsumable = [
       });
     }
 
-    console.log("validation passed.");
+    // if no validation errors, send request to database
 
     res.redirect("/");
   },
@@ -167,7 +175,8 @@ const utilityChain = [
     .trim()
     .isNumeric()
     .withMessage("Amount must be numeric")
-    .isInt({min: 0}).withMessage("Amount must be an integer 0 or above"),
+    .isInt({ min: 0 })
+    .withMessage("Amount must be an integer 0 or above"),
   body("itemName").notEmpty().withMessage("Item Name must not be empty").trim(),
   body("maxStacks")
     .notEmpty()
@@ -175,7 +184,8 @@ const utilityChain = [
     .trim()
     .isNumeric()
     .withMessage("Max Stacks must be numeric")
-    .isInt({min: 0}).withMessage("Max Stacks must be an integer 0 or above"),
+    .isInt({ min: 0 })
+    .withMessage("Max Stacks must be an integer 0 or above"),
   body("description")
     .notEmpty()
     .withMessage("Description must not be empty")
@@ -186,18 +196,16 @@ const utilityChain = [
 ];
 
 // run update function for utilities
-const updateUtility =  [
+const updateUtility = [
   utilityChain,
   async (req, res) => {
     const result = validationResult(req);
 
+    const currentItemName = req.query.name;
+    const currentItemRarity = req.query.rarity;
+
     // if there are validation errors inside the result object, render error message
     if (!result.isEmpty()) {
-      console.log("Validation error in updateWeapon.");
-
-      const currentItemName = req.query.name;
-      const currentItemRarity = req.query.rarity;
-
       const foundItem = await db.findItem(currentItemName, currentItemRarity);
 
       return res.status(400).render("update", {
@@ -208,7 +216,7 @@ const updateUtility =  [
       });
     }
 
-    console.log("validation passed.");
+    // if no validation errors, send request to database
 
     res.redirect("/");
   },

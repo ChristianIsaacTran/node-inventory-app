@@ -191,7 +191,7 @@ async function deleteItem(name, rarity, category) {
       WHERE t1.item_rarity = t2.id 
       AND t1.item_name = $1 
       AND t2.rarity = $2`;
-      
+
       await pool.query(weaponDeleteQuery, [`${name}`, `${rarity}`]);
       return console.log("Item successfully deleted.");
     } else if (category === "consumable") {
@@ -202,7 +202,7 @@ async function deleteItem(name, rarity, category) {
       WHERE t1.item_rarity = t2.id 
       AND t1.item_name = $1 
       AND t2.rarity = $2`;
-      
+
       await pool.query(consumableDeleteQuery, [`${name}`, `${rarity}`]);
       return console.log("Item successfully deleted.");
     } else if (category === "utility") {
@@ -213,7 +213,7 @@ async function deleteItem(name, rarity, category) {
       WHERE t1.item_rarity = t2.id 
       AND t1.item_name = $1 
       AND t2.rarity = $2`;
-  
+
       await pool.query(utilityDeleteQuery, [`${name}`, `${rarity}`]);
       return console.log("Item successfully deleted.");
     } else {
@@ -227,4 +227,125 @@ async function deleteItem(name, rarity, category) {
   }
 }
 
-module.exports = { getAllItems, findItem, deleteItem };
+// utility function, returns the ID of the given rarity string
+async function convertRarityToID(rarityStr) {
+  if (rarityStr === "common") {
+    return 1;
+  } else if (rarityStr === "uncommon") {
+    return 2;
+  } else if (rarityStr === "rare") {
+    return 3;
+  } else if (rarityStr === "epic") {
+    return 4;
+  } else if (rarityStr === "legendary") {
+    return 5;
+  } else if (rarityStr === "mythic") {
+    return 6;
+  } else if (rarityStr === "exotic") {
+    return 7;
+  }
+
+  return new Error("Error: could not find ID for given rarityStr.");
+}
+
+// utility function, returns the ID of the given type string
+async function convertTypeToID(typeStr) {
+  if (typeStr === "assault rifle") {
+    return 1;
+  } else if (typeStr === "shotgun") {
+    return 2;
+  } else if (typeStr === "submachine gun") {
+    return 3;
+  } else if (typeStr === "pistol") {
+    return 4;
+  } else if (typeStr === "sniper rifle") {
+    return 5;
+  } else if (typeStr === "marksman rifle") {
+    return 6;
+  } else if (typeStr === "explosive weapon") {
+    return 7;
+  } else if (typeStr === "special weapon") {
+    return 8;
+  } else if (typeStr === "utility") {
+    return 9;
+  } else if (typeStr === "consumable") {
+    return 10;
+  }
+
+  return new Error("Error: could not find ID for given typeStr.");
+}
+
+// find and update weapon in database and update it with new values from update form
+async function updateWeaponDB(prevName, prevRarity, reqBody) {
+  try {
+    const weaponUpdateQuery = `
+    UPDATE weapons 
+    SET 
+      item_name = $3,
+      item_category = $4,
+      item_rarity = $5,
+      bullet_type = $6,
+      mag_size = $7,
+      damage = $8,
+      dps = $9,
+      crit = $10,
+      fire_rate = $11,
+      reload_time = $12,
+      image_url = $13,
+      amount = $14
+    WHERE item_name = $1 AND item_rarity = $2
+    `;
+
+    // converted rarity and type ID's for PK and FK 
+    const rarityID = await convertRarityToID(prevRarity); // for where clause
+    const typeID = await convertTypeToID(reqBody.itemCategory);
+
+    // form field data
+    const itemName = reqBody.itemName;
+    const bulletType = reqBody.bulletType;
+    const magSize = reqBody.magSize;
+    const damage = reqBody.damage;
+    const dps = reqBody.dps;
+    const crit = reqBody.crit;
+    const fireRate = reqBody.fireRate;
+    const reloadTime = reqBody.reloadTime;
+    const imgLink = reqBody.imgLink;
+    const fieldRarityID = await convertRarityToID(reqBody.itemRarity);
+    const amount = reqBody.amount;
+
+    await pool.query(weaponUpdateQuery, [prevName, rarityID, itemName, typeID, fieldRarityID, bulletType, magSize, damage, dps, crit, fireRate, reloadTime, imgLink, amount]);
+    return console.log("Updated weapon successful.");
+
+  } catch (error) {
+    console.log(error);
+    return new Error(error);
+  }
+}
+
+// find and update consumable in database and update it with new values from update form
+async function updateConsumableDB(name, rarity, reqBody) {
+  try {
+    const consumableUpdateQuery = ``;
+  } catch (error) {
+    console.log(error);
+    return new Error(error);
+  }
+}
+
+// find and update utility in database and update it with new values from update form
+async function updateUtilityDB(name, rarity, reqBody) {
+  try {
+    const utilityUpdateQuery = ``;
+  } catch (error) {
+    console.log(error);
+    return new Error(error);
+  }
+}
+
+module.exports = {
+  getAllItems,
+  findItem,
+  deleteItem,
+  updateWeaponDB,
+  updateConsumableDB,
+};
