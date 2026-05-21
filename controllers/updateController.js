@@ -25,44 +25,51 @@ const weaponChain = [
     .withMessage("Amount must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("Amount must be numeric"),
+    .withMessage("Amount must be numeric")
+    .isInt({min: 0}).withMessage("Amount must be an integer 0 or above"),
   body("itemName").notEmpty().withMessage("Item Name must not be empty").trim(),
   body("magSize")
     .notEmpty()
     .withMessage("Mag Size must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("Mag Size must be numeric"),
+    .withMessage("Mag Size must be numeric")
+    .isInt({min: 0}).withMessage("Mag Size must be an integer 0 or above"),
   body("damage")
     .notEmpty()
     .withMessage("Damage must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("Damage must be numeric"),
+    .withMessage("Damage must be numeric")
+    .isFloat({min: 0}).withMessage("Damage must be a float 0 or above"),
   body("dps")
     .notEmpty()
     .withMessage("DPS must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("DPS must be numeric"),
+    .withMessage("DPS must be numeric")
+    .isFloat({min: 0}).withMessage("DPS must be a float 0 or above"),
   body("crit")
     .notEmpty()
     .withMessage("Crit must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("Crit must be numeric"),
+    .withMessage("Crit must be numeric")
+    .isFloat({min: 0}).withMessage("Crit must be a float 0 or above"),
   body("fireRate")
     .notEmpty()
     .withMessage("Fire Rate must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("Fire Rate must be numeric"),
+    .withMessage("Fire Rate must be numeric")
+    .isFloat({min: 0}).withMessage("Fire Rate must be a float 0 or above"),
   body("reloadTime")
     .notEmpty()
     .withMessage("Reload Time must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("Reload Time must be numeric"),
+    .withMessage("Reload Time must be numeric")
+    .isFloat({min: 0}).withMessage("Reload Time must be a float 0 or above"),
   body("imgLink").notEmpty().withMessage("Image Link must not be empty").trim(),
 ];
 
@@ -102,20 +109,23 @@ const consumableChain = [
     .withMessage("Amount must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("Amount must be numeric"),
+    .withMessage("Amount must be numeric")
+    .isInt({min: 0}).withMessage("Amount must be an integer 0 or above"),
   body("itemName").notEmpty().withMessage("Item Name must not be empty").trim(),
   body("healAmount")
     .notEmpty()
     .withMessage("Heal Amount must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("Heal Amount must be numeric"),
+    .withMessage("Heal Amount must be numeric")
+    .isFloat({min: 0}).withMessage("Heal Amount must be a float 0 or above"),
   body("shieldAmount")
     .notEmpty()
     .withMessage("Shield Amount must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("Shield Amount must be numeric"),
+    .withMessage("Shield Amount must be numeric")
+    .isFloat({min: 0}).withMessage("Shield Amount must be a float 0 or above"),
   body("effect").trim(),
   body("imgLink").notEmpty().withMessage("Image Link must not be empty").trim(),
 ];
@@ -156,14 +166,16 @@ const utilityChain = [
     .withMessage("Amount must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("Amount must be numeric"),
+    .withMessage("Amount must be numeric")
+    .isInt({min: 0}).withMessage("Amount must be an integer 0 or above"),
   body("itemName").notEmpty().withMessage("Item Name must not be empty").trim(),
   body("maxStacks")
     .notEmpty()
     .withMessage("Max Stacks must not be empty")
     .trim()
     .isNumeric()
-    .withMessage("Max Stacks must be numeric"),
+    .withMessage("Max Stacks must be numeric")
+    .isInt({min: 0}).withMessage("Max Stacks must be an integer 0 or above"),
   body("description")
     .notEmpty()
     .withMessage("Description must not be empty")
