@@ -102,7 +102,6 @@ const updateWeapon = [
     }
 
     // if no validation errors, send request to database
-
     await db.updateWeaponDB(currentItemName, currentItemRarity, req.body);
 
     res.redirect("/");
@@ -162,6 +161,7 @@ const updateConsumable = [
     }
 
     // if no validation errors, send request to database
+    await db.updateConsumableDB(currentItemName, currentItemRarity, req.body);
 
     res.redirect("/");
   },
@@ -217,6 +217,7 @@ const updateUtility = [
     }
 
     // if no validation errors, send request to database
+    await db.updateUtilityDB(currentItemName, currentItemRarity, req.body);
 
     res.redirect("/");
   },

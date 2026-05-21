@@ -299,12 +299,13 @@ async function updateWeaponDB(prevName, prevRarity, reqBody) {
     WHERE item_name = $1 AND item_rarity = $2
     `;
 
-    // converted rarity and type ID's for PK and FK 
+    // converted rarity and type ID's for PK and FK
     const rarityID = await convertRarityToID(prevRarity); // for where clause
-    const typeID = await convertTypeToID(reqBody.itemCategory);
 
     // form field data
     const itemName = reqBody.itemName;
+    const typeID = await convertTypeToID(reqBody.itemCategory);
+    const fieldRarityID = await convertRarityToID(reqBody.itemRarity);
     const bulletType = reqBody.bulletType;
     const magSize = reqBody.magSize;
     const damage = reqBody.damage;
@@ -313,12 +314,25 @@ async function updateWeaponDB(prevName, prevRarity, reqBody) {
     const fireRate = reqBody.fireRate;
     const reloadTime = reqBody.reloadTime;
     const imgLink = reqBody.imgLink;
-    const fieldRarityID = await convertRarityToID(reqBody.itemRarity);
     const amount = reqBody.amount;
 
-    await pool.query(weaponUpdateQuery, [prevName, rarityID, itemName, typeID, fieldRarityID, bulletType, magSize, damage, dps, crit, fireRate, reloadTime, imgLink, amount]);
+    await pool.query(weaponUpdateQuery, [
+      prevName,
+      rarityID,
+      itemName,
+      typeID,
+      fieldRarityID,
+      bulletType,
+      magSize,
+      damage,
+      dps,
+      crit,
+      fireRate,
+      reloadTime,
+      imgLink,
+      amount,
+    ]);
     return console.log("Updated weapon successful.");
-
   } catch (error) {
     console.log(error);
     return new Error(error);
@@ -326,9 +340,56 @@ async function updateWeaponDB(prevName, prevRarity, reqBody) {
 }
 
 // find and update consumable in database and update it with new values from update form
-async function updateConsumableDB(name, rarity, reqBody) {
+async function updateConsumableDB(prevName, prevRarity, reqBody) {
   try {
-    const consumableUpdateQuery = ``;
+    const consumableUpdateQuery = `
+    UPDATE consumables
+    SET
+      item_name = $3,
+      item_category = $4,
+      item_rarity = $5,
+      heal_amount = $6,
+      shield_amount = $7,
+      effect = $8,
+      image_url = $9,
+      amount = $10
+    WHERE item_name = $1 AND item_rarity = $2`;
+
+    // converted rarity and type ID's for PK and FK
+    const rarityID = await convertRarityToID(prevRarity); // for where clause
+
+    // form field data
+    const itemName = reqBody.itemName;
+    const typeID = await convertTypeToID(reqBody.itemCategory);
+    const fieldRarityID = await convertRarityToID(reqBody.itemRarity);
+    const healAmount = reqBody.healAmount;
+    const shieldAmount = reqBody.shieldAmount;
+
+    // effect field is either something or null if empty.
+    let effect;
+
+    if (reqBody.effect === "" || null || undefined) {
+      effect = null;
+    } else {
+      effect = reqBody.effect;
+    }
+
+    const imgLink = reqBody.imgLink;
+    const amount = reqBody.amount;
+
+    await pool.query(consumableUpdateQuery, [
+      prevName,
+      rarityID,
+      itemName,
+      typeID,
+      fieldRarityID,
+      healAmount,
+      shieldAmount,
+      effect,
+      imgLink,
+      amount,
+    ]);
+    return console.log("Updated consumable successful.");
   } catch (error) {
     console.log(error);
     return new Error(error);
@@ -336,9 +397,45 @@ async function updateConsumableDB(name, rarity, reqBody) {
 }
 
 // find and update utility in database and update it with new values from update form
-async function updateUtilityDB(name, rarity, reqBody) {
+async function updateUtilityDB(prevName, prevRarity, reqBody) {
   try {
-    const utilityUpdateQuery = ``;
+    const utilityUpdateQuery = `
+    UPDATE utilities
+    SET
+      item_name = $3,
+      item_category = $4,
+      item_rarity = $5,
+      max_stack = $6,
+      item_description = $7,
+      image_url = $8,
+      amount = $9
+    WHERE item_name = $1 AND item_rarity = $2
+    `;
+
+    // converted rarity and type ID's for PK and FK
+    const rarityID = await convertRarityToID(prevRarity); // for where clause
+
+    // form field data
+    const itemName = reqBody.itemName;
+    const typeID = await convertTypeToID(reqBody.itemCategory);
+    const fieldRarityID = await convertRarityToID(reqBody.itemRarity);
+    const maxStack = reqBody.maxStacks;
+    const description = reqBody.description;
+    const imgLink = reqBody.imgLink;
+    const amount = reqBody.amount;
+
+    await pool.query(utilityUpdateQuery, [
+      prevName,
+      rarityID,
+      itemName,
+      typeID,
+      fieldRarityID,
+      maxStack,
+      description,
+      imgLink,
+      amount,
+    ]);
+    return console.log("Update utility successful.");
   } catch (error) {
     console.log(error);
     return new Error(error);
@@ -351,4 +448,5 @@ module.exports = {
   deleteItem,
   updateWeaponDB,
   updateConsumableDB,
+  updateUtilityDB
 };
