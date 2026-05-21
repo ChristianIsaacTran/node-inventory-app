@@ -1,0 +1,21 @@
+.error-container {
+  color: red;
+  background-color: rgb(0, 0, 0, 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+}
+
+.error-container > h2 {
+  font-size: 5rem;
+  text-shadow: black 1px 1px 0px;
+  text-decoration: underline;
+}
+
+li {
+  font-size: 2rem;
+  text-shadow: black 1px 1px 0px;
+  font-style: italic;
+  margin: 20px;
+}
