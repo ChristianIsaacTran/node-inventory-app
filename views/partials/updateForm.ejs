@@ -10,35 +10,35 @@
         <input id="item-name" type="text" name="itemName" value="<%= item.item_name %>">
         <label class="item-category-label" for="item-category ">Item category: </label>
         <select id="item-category" name="itemCategory" value="<%= item.type %>">
-            <option value="assault rifle">Assault Rifle</option>
-            <option value="shotgun">Shotgun</option>
-            <option value="submachine gun">Submachine Gun</option>
-            <option value="pistol">Pistol</option>
-            <option value="sniper rifle">Sniper Rifle</option>
-            <option value="marksman rifle">Marksman Rifle</option>
-            <option value="explosive weapon">Explosive Weapon</option>
-            <option value="special weapon">Special Weapon</option>
+            <option value="assault rifle" <%= item.type === "assault rifle" ? "selected" : "" %> >Assault Rifle</option>
+            <option value="shotgun" <%= item.type === "shotgun" ? "selected" : "" %>>Shotgun</option>
+            <option value="submachine gun" <%= item.type === "submachine gun" ? "selected" : "" %>>Submachine Gun</option>
+            <option value="pistol" <%= item.type === "pistol" ? "selected" : "" %>>Pistol</option>
+            <option value="sniper rifle" <%= item.type === "sniper rifle" ? "selected" : "" %>>Sniper Rifle</option>
+            <option value="marksman rifle" <%= item.type === "marksman rifle" ? "selected" : "" %>>Marksman Rifle</option>
+            <option value="explosive weapon" <%= item.type === "explosive weapon" ? "selected" : "" %>>Explosive Weapon</option>
+            <option value="special weapon" <%= item.type === "special weapon" ? "selected" : "" %>>Special Weapon</option>
         </select>
         <label class="item-rarity-label" for="item-rarity">Item rarity: </label>
-        <select id="item-rarity" name="itemRarity" value="<%= item.rarity %>">
-            <option value="common">Common</option>
-            <option value="uncommon">Uncommon</option>
-            <option value="rare">Rare</option>
-            <option value="epic">Epic</option>
-            <option value="legendary">Legendary</option>
-            <option value="mythic">Mythic</option>
-            <option value="exotic">Exotic</option>
+        <select id="item-rarity" name="itemRarity" >
+            <option value="common" <%= item.rarity === "common" ? "selected" : "" %> >Common</option>
+            <option value="uncommon" <%= item.rarity === "uncommon" ? "selected" : "" %>>Uncommon</option>
+            <option value="rare" <%= item.rarity === "rare" ? "selected" : "" %>>Rare</option>
+            <option value="epic" <%= item.rarity === "epic" ? "selected" : "" %>>Epic</option>
+            <option value="legendary" <%= item.rarity === "legendary" ? "selected" : "" %>>Legendary</option>
+            <option value="mythic" <%= item.rarity === "mythic" ? "selected" : "" %>>Mythic</option>
+            <option value="exotic" <%= item.rarity === "exotic" ? "selected" : "" %>>Exotic</option>
         </select>
         <label class="bullet-type-label" for="bullet-type">Bullet Type: </label>
         <select id="bullet-type" name="bulletType" value="<%= item.bullet_type %>">
-            <option value="light bullets">Light Bullets</option>
-            <option value="medium bullets">Medium Bullets</option>
-            <option value="heavy bullets">Heavy Bullets</option>
-            <option value="shells">Shells</option>
-            <option value="rockets">Rockets</option>
-            <option value="arrows">Arrows</option>
-            <option value="grenade">Grenade Charges</option>
-            <option value="special ammo">Special Charges/Ammo</option>
+            <option value="light bullets" <%= item.bullet_type === "light bullets" ? "selected" : ""  %>>Light Bullets</option>
+            <option value="medium bullets" <%= item.bullet_type === "medium bullets" ? "selected" : ""  %>>Medium Bullets</option>
+            <option value="heavy bullets" <%= item.bullet_type === "heavy bullets" ? "selected" : ""  %>>Heavy Bullets</option>
+            <option value="shells" <%= item.bullet_type === "shells" ? "selected" : ""  %>>Shells</option>
+            <option value="rockets" <%= item.bullet_type === "rockets" ? "selected" : ""  %>>Rockets</option>
+            <option value="arrows" <%= item.bullet_type === "arrows" ? "selected" : ""  %>>Arrows</option>
+            <option value="grenade" <%= item.bullet_type === "grenade" ? "selected" : ""  %>>Grenade Charges</option>
+            <option value="special ammo" <%= item.bullet_type === "charges" ? "selected" : ""  %>>Special Charges/Ammo</option>
         </select>
         <label class="mag-size-label" for="mag-size">Mag Size: </label>
         <input id="mag-size" type="number" name="magSize" value="<%= item.mag_size %>">
@@ -63,18 +63,18 @@
         <label class="item-name-label" for="item-name">Item name: </label>
         <input id="item-name" type="text" name="itemName" value="<%= item.item_name %>">
         <label class="item-category-label" for="item-category">Item category: </label>
-        <select id="item-category" name="itemCategory" value="<%= item.type %>">
-            <option value="consumable">Consumable</option>
+        <select id="item-category" name="itemCategory">
+            <option value="consumable" selected>Consumable</option>
         </select>
         <label class="item-rarity-label" for="item-rarity">Item rarity: </label>
-        <select id="item-rarity" name="itemRarity" value="<%= item.rarity %>">
-            <option value="common">Common</option>
-            <option value="uncommon">Uncommon</option>
-            <option value="rare">Rare</option>
-            <option value="epic">Epic</option>
-            <option value="legendary">Legendary</option>
-            <option value="mythic">Mythic</option>
-            <option value="exotic">Exotic</option>
+        <select id="item-rarity" name="itemRarity" >
+            <option value="common" <%= item.rarity === "common" ? "selected" : "" %> >Common</option>
+            <option value="uncommon" <%= item.rarity === "uncommon" ? "selected" : "" %>>Uncommon</option>
+            <option value="rare" <%= item.rarity === "rare" ? "selected" : "" %>>Rare</option>
+            <option value="epic" <%= item.rarity === "epic" ? "selected" : "" %>>Epic</option>
+            <option value="legendary" <%= item.rarity === "legendary" ? "selected" : "" %>>Legendary</option>
+            <option value="mythic" <%= item.rarity === "mythic" ? "selected" : "" %>>Mythic</option>
+            <option value="exotic" <%= item.rarity === "exotic" ? "selected" : "" %>>Exotic</option>
         </select>
         <label class="heal-amount-label" for="heal-amount">Heal Amount: </label>
         <input id="heal-amount" type="number" name="healAmount" value="<%= item.heal_amount %>" step="any">
@@ -93,18 +93,18 @@
         <label class="item-name-label" for="item-name">Item name: </label>
         <input id="item-name" type="text" name="itemName" value="<%= item.item_name %>">
         <label class="item-category-label" for="item-category">Item category: </label>
-        <select id="item-category" name="itemCategory" value="<%= item.type %>">
-            <option value="utility">utility</option>
+        <select id="item-category" name="itemCategory">
+            <option value="utility" selected>utility</option>
         </select>
         <label class="item-rarity-label" for="item-rarity">Item rarity: </label>
-        <select id="item-rarity" name="itemRarity" value="<%= item.rarity %>">
-            <option value="common">Common</option>
-            <option value="uncommon">Uncommon</option>
-            <option value="rare">Rare</option>
-            <option value="epic">Epic</option>
-            <option value="legendary">Legendary</option>
-            <option value="mythic">Mythic</option>
-            <option value="exotic">Exotic</option>
+        <select id="item-rarity" name="itemRarity" >
+            <option value="common" <%= item.rarity === "common" ? "selected" : "" %> >Common</option>
+            <option value="uncommon" <%= item.rarity === "uncommon" ? "selected" : "" %>>Uncommon</option>
+            <option value="rare" <%= item.rarity === "rare" ? "selected" : "" %>>Rare</option>
+            <option value="epic" <%= item.rarity === "epic" ? "selected" : "" %>>Epic</option>
+            <option value="legendary" <%= item.rarity === "legendary" ? "selected" : "" %>>Legendary</option>
+            <option value="mythic" <%= item.rarity === "mythic" ? "selected" : "" %>>Mythic</option>
+            <option value="exotic" <%= item.rarity === "exotic" ? "selected" : "" %>>Exotic</option>
         </select>
         <label class="max-stacks-label" for="max-stacks">Max Stacks: </label>
         <input id="max-stacks" type="number" name="maxStacks" value="<%= item.max_stack %>">
