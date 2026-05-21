@@ -63,10 +63,7 @@ const weaponChain = [
     .trim()
     .isNumeric()
     .withMessage("Reload Time must be numeric"),
-  body("imgLink")
-    .notEmpty()
-    .withMessage("Image Link must not be empty")
-    .trim(),
+  body("imgLink").notEmpty().withMessage("Image Link must not be empty").trim(),
 ];
 
 // run update function for weapons
@@ -84,14 +81,12 @@ const updateWeapon = [
 
       const foundItem = await db.findItem(currentItemName, currentItemRarity);
 
-      return res
-        .status(400)
-        .render("update", {
-          validationErr: true,
-          validationArr: result.array(),
-          category: req.params.category,
-          item: foundItem.recordArr[0],
-        });
+      return res.status(400).render("update", {
+        validationErr: true,
+        validationArr: result.array(),
+        category: req.params.category,
+        item: foundItem.recordArr[0],
+      });
     }
 
     console.log("validation passed.");
@@ -100,27 +95,34 @@ const updateWeapon = [
   },
 ];
 
-
 // consumable update validation
 const consumableChain = [
-    body("amount")
+  body("amount")
     .notEmpty()
     .withMessage("Amount must not be empty")
     .trim()
     .isNumeric()
     .withMessage("Amount must be numeric"),
   body("itemName").notEmpty().withMessage("Item Name must not be empty").trim(),
-  body("healAmount").notEmpty().withMessage("Heal Amount must not be empty").trim().isNumeric().withMessage("Heal Amount must be numeric"),
-  body("shieldAmount").notEmpty().withMessage("Shield Amount must not be empty").trim().isNumeric().withMessage("Shield Amount must be numeric"),
-  body("effect").trim(),
-  body("imgLink")
+  body("healAmount")
     .notEmpty()
-    .withMessage("Image Link must not be empty")
-    .trim(),
+    .withMessage("Heal Amount must not be empty")
+    .trim()
+    .isNumeric()
+    .withMessage("Heal Amount must be numeric"),
+  body("shieldAmount")
+    .notEmpty()
+    .withMessage("Shield Amount must not be empty")
+    .trim()
+    .isNumeric()
+    .withMessage("Shield Amount must be numeric"),
+  body("effect").trim(),
+  body("imgLink").notEmpty().withMessage("Image Link must not be empty").trim(),
 ];
 
 // run update function for consumables
-const updateConsumable = [ consumableChain, 
+const updateConsumable = [
+  consumableChain,
   async (req, res) => {
     const result = validationResult(req);
 
@@ -133,14 +135,12 @@ const updateConsumable = [ consumableChain,
 
       const foundItem = await db.findItem(currentItemName, currentItemRarity);
 
-      return res
-        .status(400)
-        .render("update", {
-          validationErr: true,
-          validationArr: result.array(),
-          category: req.params.category,
-          item: foundItem.recordArr[0],
-        });
+      return res.status(400).render("update", {
+        validationErr: true,
+        validationArr: result.array(),
+        category: req.params.category,
+        item: foundItem.recordArr[0],
+      });
     }
 
     console.log("validation passed.");
@@ -149,10 +149,56 @@ const updateConsumable = [ consumableChain,
   },
 ];
 
+// utility update validation
+const utilityChain = [
+  body("amount")
+    .notEmpty()
+    .withMessage("Amount must not be empty")
+    .trim()
+    .isNumeric()
+    .withMessage("Amount must be numeric"),
+  body("itemName").notEmpty().withMessage("Item Name must not be empty").trim(),
+  body("maxStacks")
+    .notEmpty()
+    .withMessage("Max Stacks must not be empty")
+    .trim()
+    .isNumeric()
+    .withMessage("Max Stacks must be numeric"),
+  body("description")
+    .notEmpty()
+    .withMessage("Description must not be empty")
+    .trim()
+    .isLength({ max: 300 })
+    .withMessage("Description must be within 1-300 characters"),
+  body("imgLink").notEmpty().withMessage("Image Link must not be empty").trim(),
+];
+
 // run update function for utilities
-const updateUtility = [
+const updateUtility =  [
+  utilityChain,
   async (req, res) => {
-    return;
+    const result = validationResult(req);
+
+    // if there are validation errors inside the result object, render error message
+    if (!result.isEmpty()) {
+      console.log("Validation error in updateWeapon.");
+
+      const currentItemName = req.query.name;
+      const currentItemRarity = req.query.rarity;
+
+      const foundItem = await db.findItem(currentItemName, currentItemRarity);
+
+      return res.status(400).render("update", {
+        validationErr: true,
+        validationArr: result.array(),
+        category: req.params.category,
+        item: foundItem.recordArr[0],
+      });
+    }
+
+    console.log("validation passed.");
+
+    res.redirect("/");
   },
 ];
 
