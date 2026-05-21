@@ -43,7 +43,8 @@ async function getAllItems() {
       weapons.amount
     FROM weapons 
     JOIN item_type ON weapons.item_category = item_type.id
-    JOIN rarity_type ON weapons.item_rarity = rarity_type.id`;
+    JOIN rarity_type ON weapons.item_rarity = rarity_type.id
+    ORDER BY weapons.id`;
     const weaponsResult = await pool.query(weaponsQuery);
     const weaponsRows = weaponsResult.rows;
 
@@ -61,7 +62,8 @@ async function getAllItems() {
 
     FROM consumables
     JOIN item_type ON consumables.item_category = item_type.id
-    JOIN rarity_type ON consumables.item_rarity = rarity_type.id`;
+    JOIN rarity_type ON consumables.item_rarity = rarity_type.id
+    ORDER BY consumables.id`;
     const conResult = await pool.query(conQuery);
     const conRows = conResult.rows;
 
@@ -77,7 +79,8 @@ async function getAllItems() {
 
     FROM utilities
     JOIN item_type ON utilities.item_category = item_type.id
-    JOIN rarity_type ON utilities.item_rarity = rarity_type.id`;
+    JOIN rarity_type ON utilities.item_rarity = rarity_type.id
+    ORDER BY utilities.id`;
     const utilResult = await pool.query(utilQuery);
     const utilRows = utilResult.rows;
 
