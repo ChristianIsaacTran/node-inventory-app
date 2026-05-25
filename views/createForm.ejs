@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/home.css">
+</head>
+<body>
+    <%- include("./partials/header") %> <%- include("./partials/navbar") %>
+    <main>
+      <h1 class="route-title"><%= formType %> Form</h1>
+        <% if(formType === "Weapon") {%>
+            <%- include("./partials/weaponCreateForm") %>
+        <% } else if(formType === "Consumable") { %>
+             <%- include("./partials/consumableCreateForm") %>
+        <% } else if(formType === "Utility") { %>
+             <%- include("./partials/utilityCreateForm") %>
+        <% } else { %>
+            <h1>Error: Couldn't find form route.</h1>
+        <% } %>
+    </main>
+</body>
+</html>

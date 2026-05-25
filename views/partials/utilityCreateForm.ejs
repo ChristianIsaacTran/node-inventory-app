@@ -1,0 +1,31 @@
+ <head>
+    <link rel="stylesheet" href="/createForm.css">
+ </head>
+ 
+ <form action="/update/<%=formType%>/<%=formType%>" method="post" class="utility-form">
+        <label class="amount-label" for="amount">Amount: </label>
+        <input type="number" id="amount" name="amount" value="<%= prevInput ? prevInput.amount : "" %>" min="0">
+        <label class="item-name-label" for="item-name">Item name: </label>
+        <input id="item-name" type="text" name="itemName" value="<%= prevInput ? prevInput.itemName : "" %>">
+        <label class="item-category-label" for="item-category">Item category: </label>
+        <select id="item-category" name="itemCategory">
+            <option value="utility" selected>utility</option>
+        </select>
+        <label class="item-rarity-label" for="item-rarity">Item rarity: </label>
+        <select id="item-rarity" name="itemRarity" >
+            <option value="common" <%= prevInput ? (prevInput.itemRarity === "common" ? "selected" : "") : "" %> >Common</option>
+            <option value="uncommon" <%= prevInput ? (prevInput.itemRarity === "uncommon" ? "selected" : "") : "" %>>Uncommon</option>
+            <option value="rare" <%= prevInput ? (prevInput.itemRarity === "rare" ? "selected" : "") : "" %>>Rare</option>
+            <option value="epic" <%= prevInput ? (prevInput.itemRarity === "epic" ? "selected" : "") : "" %>>Epic</option>
+            <option value="legendary" <%= prevInput ? (prevInput.itemRarity === "legendary" ? "selected" : "") : "" %>>Legendary</option>
+            <option value="mythic" <%= prevInput ? (prevInput.itemRarity === "mythic" ? "selected" : "") : "" %>>Mythic</option>
+            <option value="exotic"<%= prevInput ? (prevInput.itemRarity === "exotic" ? "selected" : "") : "" %>>Exotic</option>
+        </select>
+        <label class="max-stacks-label" for="max-stacks">Max Stacks: </label>
+        <input id="max-stacks" type="number" name="maxStacks" value="<%= prevInput ? prevInput.maxStacks : "" %>" min="0">
+        <label class="desription-label" for="description">Item Description: </label>
+        <textarea id="description" rows="7" spellcheck name="description"><%= prevInput ? prevInput.description : "" %></textarea>
+        <label class="img-link-label" for="img-link">Item Image Link: </label>
+        <input id="img-link" type="text" name="imgLink" value="<%= prevInput ? prevInput.imgLink : "" %>">
+        <button class="form-submit" type="submit">Submit</button>
+    </form>
