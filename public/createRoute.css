@@ -1,0 +1,50 @@
+.create-link-group {
+    display: flex; 
+    flex-direction: column;
+    font-size: 3rem;
+    gap: 150px;
+    margin-top: 20px;
+}
+
+.weapon-create-link, 
+.consumable-create-link, 
+.utility-create-link {
+    text-decoration: none; 
+    font-style: italic;
+    color: black;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.weapon-create-link::after,
+.consumable-create-link::after,
+.utility-create-link::after {
+    content: "";
+    background-color: rgb(255, 255, 0);
+    position: absolute; 
+    width: 120%;
+    height: 120%;
+    z-index: -1;
+    right: 0;
+    left: -8px;
+    top: -11px;
+    bottom: 0;
+    transform: skew(5deg);
+}
+
+.weapon-create-link::before,
+.consumable-create-link::before,
+.utility-create-link::before {
+    content: "";
+    background-color: rgb(160, 160, 8);
+    position: absolute; 
+    width: 140%;
+    height: 140%;
+    z-index: -2;
+    right: 0;
+    left: -35px;
+    top: -17px;
+    bottom: 0;
+    
+}
