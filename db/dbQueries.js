@@ -452,11 +452,145 @@ async function updateUtilityDB(prevName, prevRarity, reqBody) {
   }
 }
 
+// take form data and a form type and add it to respective table in db
+async function addItem(data, formType) {
+  try{
+    
+    if(formType === "Weapon") {
+      const weaponInsertQuery = `
+      INSERT INTO 
+      weapons
+      (item_name, 
+      item_category, 
+      item_rarity,
+      bullet_type,
+      mag_size, 
+      damage,
+      dps,
+      crit,
+      fire_rate,
+      reload_time,
+      image_url,
+      amount)
+      VALUES
+      ($1, 
+      $2,
+      $3,
+      $4,
+      $5,
+      $6,
+      $7,
+      $8,
+      $9,
+      $10,
+      $11,
+      $12)
+      `;
+
+      // column variables
+      const itemName = data.itemName;
+      const itemCategory = await convertTypeToID(data.itemCategory);
+      const itemRarity = await convertRarityToID(data.itemRarity);
+      const bulletType = data.bulletType;
+      const magSize = data.magSize;
+      const damage = data.damage;
+      const dps = data.dps;
+      const crit = data.crit;
+      const fireRate = data.fireRate;
+      const reloadTime = data.reloadTime;
+      const imgLink = data.imgLink;
+      const amount = data.amount;
+
+      await pool.query(weaponInsertQuery, [itemName, itemCategory, itemRarity, bulletType, magSize, damage, dps, crit, fireRate, reloadTime, imgLink, amount]);
+
+      return console.log("Added item to database.");
+    } else if(formType === "Consumable") {
+      const consumableInsertQuery = `
+      INSERT INTO 
+      consumables
+      (item_name,
+      item_category,
+      item_rarity,
+      heal_amount,
+      shield_amount,
+      effect,
+      image_url,
+      amount)
+      VALUES
+      ($1, 
+      $2,
+      $3,
+      $4,
+      $5,
+      $6,
+      $7,
+      $8)
+      `;
+
+      // column variables
+      const itemName = data.itemName;
+      const itemCategory = await convertTypeToID(data.itemCategory);
+      const itemRarity = await convertRarityToID(data.itemRarity);
+      const healAmount = data.healAmount;
+      const shieldAmount = data.shieldAmount;
+      const effect = data.effect;
+      const imgLink = data.imgLink;
+      const amount = data.amount;
+      
+      await pool.query(consumableInsertQuery, [itemName, itemCategory, itemRarity, healAmount, shieldAmount, effect, imgLink, amount]);
+
+      return console.log("Added item to database.");
+
+    } else if(formType === "Utility") {
+      const utilityInsertQuery = `
+      INSERT INTO 
+      utilities
+      (item_name,
+      item_category,
+      item_rarity,
+      max_stack,
+      item_description,
+      image_url,
+      amount)
+      VALUES
+      ($1, 
+      $2,
+      $3,
+      $4,
+      $5,
+      $6,
+      $7)
+      `;
+
+      // column variables
+      const itemName = data.itemName;
+      const itemCategory = await convertTypeToID(data.itemCategory);
+      const itemRarity = await convertRarityToID(data.itemRarity);
+      const maxStack = data.maxStacks;
+      const description = data.description;
+      const imgLink = data.imgLink;
+      const amount = data.amount;
+      
+      await pool.query(utilityInsertQuery, [itemName, itemCategory, itemRarity, maxStack, description, imgLink, amount]);
+
+      return console.log("Added item to database.");
+
+    } 
+
+    throw new Error("Error: db addItem() unsuccessful");
+
+  } catch(error) {
+    console.log(error);
+    return new Error(error);
+  }
+}
+
 module.exports = {
   getAllItems,
   findItem,
   deleteItem,
   updateWeaponDB,
   updateConsumableDB,
-  updateUtilityDB
+  updateUtilityDB,
+  addItem
 };

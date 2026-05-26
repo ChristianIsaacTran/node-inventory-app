@@ -141,45 +141,142 @@ const utilityChain = [
   body("imgLink").notEmpty().withMessage("Image Link must not be empty").trim(),
 ];
 
-async function postCreateForm(req, res) {
-  console.log("form submitting attempt");
-  console.log(`form type: ${req.params.formType}`);
+const addWeapon = [
+  weaponChain,
+  async (req, res) => {
+    const formType = req.query.formType;
 
-  const formType = req.params.formType;
+    // keeps user's input fields if form has validation errors
+    const prevInput = req.body;
 
-  // keeps user's input fields if form has validation errors
-  const prevInput = req.body;
+    const formItemName = req.body.itemName;
+    const formItemRarity = req.body.itemRarity;
 
-  const formItemName = req.body.itemName;
-  const formItemRarity = req.body.itemRarity;
-
-  // check if item exists first. if it does, then return an error saying that it already exists in the database
-  const foundItemCheck = await db.findItem(formItemName, formItemRarity);
-  if (foundItemCheck) {
-    return res
-      .status(400)
-      .render("createForm", {
+    // check if item exists first. if it does, then return an error saying that it already exists in the database
+    const foundItemCheck = await db.findItem(formItemName, formItemRarity);
+    if (foundItemCheck) {
+      return res.status(400).render("createForm", {
         validationErr: false,
         itemExistsErr: true,
         formType,
         prevInput,
       });
-  }
+    }
 
-  // normal validation check if the item-exists-check passes for each form
-  if (formType === "Weapon") {
-    //weapon create form validation
-  } else if (formType === "Consumable") {
-    //consumable create form validation
-  } else if (formType === "Utility") {
-    //utility create form validation
-  }
+    const result = validationResult(req);
 
-  res.send("send attempt");
-}
+    // if there are errors, send error response
+    if (!result.isEmpty()) {
+      return res.status(400).render("createForm", {
+        validationErr: true,
+        itemExistsErr: false,
+        formType,
+        prevInput,
+        validationArr: result.array(),
+      });
+    }
+
+    const data = req.body;
+
+    // add to database if no errors
+    await db.addItem(data, formType);
+
+    res.redirect("/");
+  },
+];
+
+const addConsumable = [
+  consumableChain,
+  async (req, res) => {
+    const formType = req.query.formType;
+
+    // keeps user's input fields if form has validation errors
+    const prevInput = req.body;
+
+    const formItemName = req.body.itemName;
+    const formItemRarity = req.body.itemRarity;
+
+    // check if item exists first. if it does, then return an error saying that it already exists in the database
+    const foundItemCheck = await db.findItem(formItemName, formItemRarity);
+    if (foundItemCheck) {
+      return res.status(400).render("createForm", {
+        validationErr: false,
+        itemExistsErr: true,
+        formType,
+        prevInput,
+      });
+    }
+
+    const result = validationResult(req);
+
+    // if there are errors, send error response
+    if (!result.isEmpty()) {
+      return res.status(400).render("createForm", {
+        validationErr: true,
+        itemExistsErr: false,
+        formType,
+        prevInput,
+        validationArr: result.array(),
+      });
+    }
+
+    const data = req.body;
+
+    // add to database if no errors
+    await db.addItem(data, formType);
+
+    res.redirect("/");
+  },
+];
+
+const addUtility = [
+  utilityChain,
+  async (req, res) => {
+    const formType = req.query.formType;
+
+    // keeps user's input fields if form has validation errors
+    const prevInput = req.body;
+
+    const formItemName = req.body.itemName;
+    const formItemRarity = req.body.itemRarity;
+
+    // check if item exists first. if it does, then return an error saying that it already exists in the database
+    const foundItemCheck = await db.findItem(formItemName, formItemRarity);
+    if (foundItemCheck) {
+      return res.status(400).render("createForm", {
+        validationErr: false,
+        itemExistsErr: true,
+        formType,
+        prevInput,
+      });
+    }
+    
+    const result = validationResult(req);
+
+    // if there are errors, send error response
+    if (!result.isEmpty()) {
+      return res.status(400).render("createForm", {
+        validationErr: true,
+        itemExistsErr: false,
+        formType,
+        prevInput,
+        validationArr: result.array(),
+      });
+    }
+
+    const data = req.body;
+
+    // add to database if no errors
+    await db.addItem(data, formType);
+
+    res.redirect("/");
+  },
+];
 
 module.exports = {
   renderCreateRoutes,
   renderCreateForm,
-  postCreateForm,
+  addWeapon,
+  addUtility,
+  addConsumable,
 };
