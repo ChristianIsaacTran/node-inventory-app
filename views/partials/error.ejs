@@ -1,0 +1,22 @@
+<% if(validationErr === true) { %>
+    <head>
+        <link rel="stylesheet" href="/error.css">
+    </head>
+    <div class="error-container">
+        <h2>Form Error: </h2>
+        <ul class="error-list">
+            <%validationArr.forEach((error) => { %>
+                <li><%= error.msg %></li>
+            <% });%>
+        </ul>
+    </div>
+<% } %>
+<%  if(itemExistsErr === true) { %>
+    <head>
+        <link rel="stylesheet" href="/error.css">
+    </head>
+    <div class="error-container">
+        <h2>Form Error: </h2>
+        <h3 class="item-exists-error">Fatal Error: item already exists in database</h3>
+    </div>
+<% } %>

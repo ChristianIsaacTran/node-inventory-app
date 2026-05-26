@@ -15,6 +15,7 @@ async function renderUpdateForm(req, res) {
     item: foundItem.recordArr[0],
     category: foundItem.itemCategory,
     validationErr: false,
+    itemExistsErr: false,
   });
 }
 
@@ -98,6 +99,7 @@ const updateWeapon = [
         validationArr: result.array(),
         category: req.params.category,
         item: foundItem.recordArr[0],
+        itemExistsErr: false,
       });
     }
 
@@ -157,6 +159,7 @@ const updateConsumable = [
         validationArr: result.array(),
         category: req.params.category,
         item: foundItem.recordArr[0],
+        itemExistsErr: false,
       });
     }
 
@@ -213,6 +216,7 @@ const updateUtility = [
         validationArr: result.array(),
         category: req.params.category,
         item: foundItem.recordArr[0],
+        itemExistsErr: false,
       });
     }
 

@@ -19,3 +19,10 @@ li {
   font-style: italic;
   margin: 20px;
 }
+
+.item-exists-error {
+  font-size: 2rem;
+  text-shadow: black 1px 1px 0px;
+  font-style: italic;
+  margin: 20px;
+}

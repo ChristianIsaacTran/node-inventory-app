@@ -10,6 +10,7 @@
     <%- include("./partials/header") %> <%- include("./partials/navbar") %>
     <main>
       <h1 class="route-title"><%= formType %> Form</h1>
+        <%- include("./partials/error") %>
         <% if(formType === "Weapon") {%>
             <%- include("./partials/weaponCreateForm") %>
         <% } else if(formType === "Consumable") { %>

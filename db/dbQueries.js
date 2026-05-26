@@ -94,6 +94,12 @@ async function getAllItems() {
 // search database and query for the item with the same name and rarity. Return an array with item and a category type string
 async function findItem(name, rarity) {
   try {
+
+    // normalize name parameter to always be lowercase to simplify search (all db entries are lowercase)
+    const loweredName = name.toLowerCase();
+
+
+
     // check each table for the existence of the item. The plan is to prevent duplicate items from being added into db so assume theres only 1 of every item
     const weaponsQuery = `
     SELECT 
@@ -144,15 +150,15 @@ async function findItem(name, rarity) {
     WHERE item_name = $1 AND rarity = $2`;
 
     const weaponsResult = await pool.query(weaponsQuery, [
-      `${name}`,
+      `${loweredName}`,
       `${rarity}`,
     ]);
     const consumablesResult = await pool.query(consumablesQuery, [
-      `${name}`,
+      `${loweredName}`,
       `${rarity}`,
     ]);
     const utilitiesResult = await pool.query(utilitiesQuery, [
-      `${name}`,
+      `${loweredName}`,
       `${rarity}`,
     ]);
 
@@ -172,7 +178,11 @@ async function findItem(name, rarity) {
       return { recordArr: utilitiesRows, itemCategory: "utility" };
     }
 
-    return new Error("Error: No entries found in db tables.");
+    console.log("Error: No entries found in db tables.");
+
+    // for item check if statements
+    return false;
+    
   } catch (error) {
     console.log(error);
     return new Error(error);
