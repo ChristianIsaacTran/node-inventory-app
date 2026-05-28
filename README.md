@@ -177,7 +177,7 @@ the miscellaneous stuff, like building mats or vehicles, etc.
 
 - During DELETE operation, I need to reference another table.
   Instead of JOIN, I had to use the unique postgreSQL keyword, "USING" with a WHERE clause to define
-  how to "join" the tables together. USING keyword is for postgreSQL DELETE operation specifically 
+  how to "join" the tables together. USING keyword is for postgreSQL DELETE operation specifically
   to reference another table if I need it. For example, during the coding for the Delete button operation for
   the item cards, I had to use the USING keyword to reference the rarity_type table to match the rarity column with the input for
   the dbQuery function, deleteItem() to match the rarity type from the rarity table.
@@ -195,7 +195,7 @@ the miscellaneous stuff, like building mats or vehicles, etc.
 
       - The USING keyword defines another table I can use for reference. Similar to a JOIN, but for DELETE. In this example, I am using a DELETE operation to delete records from table1 given with alias "t1". I used the "USING" keyword to reference table2 (with alias "t2") and then defined the relation condition in the WHERE clause with t1.item_rarity and t2.id to match (similar to an ON condition). Then I added any other conditions to the WHERE clause to filter and narrow down the records I want to delete from table1.
 
-      - Note, this is UNIQUE to postgreSQL. Other SQL programs use different syntax to handle JOIN conditions with other operations other than SELECT operations. For exmaple, USING exists as a general SQL express as a shorthand to the ON clause for JOINS, but mySQL supports DELETE JOIN, but PostgreSQL doesn't support DELETE JOIN so the USING keyword needs to be used during a DELETE statement. 
+      - Note, this is UNIQUE to postgreSQL. Other SQL programs use different syntax to handle JOIN conditions with other operations other than SELECT operations. For exmaple, USING exists as a general SQL express as a shorthand to the ON clause for JOINS, but mySQL supports DELETE JOIN, but PostgreSQL doesn't support DELETE JOIN so the USING keyword needs to be used during a DELETE statement.
 
       - demonstration of USING with DELETE is here: https://neon.com/postgresql/tutorial/delete-join
 
@@ -205,3 +205,11 @@ the miscellaneous stuff, like building mats or vehicles, etc.
 
 - A quick drawing of the website layout I want to do
   ![drawingofinventorylayout](inventoryPlan.png)
+
+## hosting website
+
+- Project will be hosted by Railway with a postgreSQL DB.
+
+- Project link through Railway:
+
+https://node-inventory-app-production.up.railway.app/
